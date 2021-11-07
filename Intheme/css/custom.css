@@ -1,0 +1,37 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+body {
+  height: 500vh;
+}
+.flex {
+  display: flex;
+  height: 200vh;
+}
+/* .divider {
+  padding: 10px 20px;
+} */
+.left-float {
+  flex: 70%;
+}
+.right-float {
+  flex: 30%;
+}
+.side-div {
+  border: #ccc solid 1px;
+  padding: 30px 50px;
+  margin: 10px;
+}
+.ads {
+  width: 445px;
+  height: 300px;
+}
+.bg {
+  background: #dbe3ea;
+  padding: 50px 100px;
+}

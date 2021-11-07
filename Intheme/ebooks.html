@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Ebooks | Closer Claus</title>
+
+    <link href="css/style1.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="css/themify-icons.css" rel="stylesheet"> -->
+    <link href="css/blog.min.css" rel="stylesheet">
+    <!-- <link href="css/custom.min.css" rel="stylesheet" type="text/css" media="all">  -->
+
+    <style>
+        .container>div,
+        img {
+            vertical-align: middle
+        }
+        
+        html {
+            overflow-x: hidden
+        }
+        
+        *,
+        .container>div,
+         ::after,
+         ::before {
+            box-sizing: inherit
+        }
+        
+        #post-tabs>li>a,
+        .blog-featured,
+        .btn,
+        .pill,
+        .post-box>p {
+            text-align: center
+        }
+        
+        .list-unstyled,
+        .nav {
+            list-style: none
+        }
+        
+        #post-list::after,
+        .clearfix::after,
+        .nav-tabs::after,
+        .navbar::after {
+            clear: both
+        }
+        
+        .post-box {
+            display: block;
+            margin: 0 -6px 18px
+        }
+        
+        .post-box>figure,
+        .post-box>figure>img {
+            border-radius: 4px 4px 0 0
+        }
+        
+        .post-box>p {
+            background: #f6f6f6;
+            border-width: 0 1px 1px;
+            border-image: initial;
+            border-radius: 0 0 4px 4px;
+            color: #333;
+            font-size: 12px;
+            padding: 8px;
+            line-height: 1.5em;
+            min-height: 50px;
+            border-style: initial solid solid;
+            border-color: initial #ececec #ececec
+        }
+        
+        @media (min-width:768px) {
+            .post-box {
+                margin: 0 0 25px
+            }
+            .post-box>p {
+                font-size: 15px;
+                padding: 20px 25px
+            }
+        }
+        
+        @media (max-width:991px) and (min-width:544px) {
+            #post-nav {
+                margin-bottom: 3em
+            }
+        }
+        
+        #post-tabs {
+            border: 0;
+            padding: 1em 2.5em
+        }
+        
+        @media (max-width:768px) {
+            #post-tabs {
+                padding: 5px 0 0
+            }
+        }
+        
+        #post-tabs>li {
+            float: none;
+            margin: 0 0 5px
+        }
+        
+        .col-xs-12,
+        .col-xs-6,
+        .navbar-nav .nav-item {
+            float: left
+        }
+        
+        #post-tabs>li>a {
+            border: 0;
+            border-radius: 50px;
+            color: #9ca4ac;
+            font-size: 16px;
+            padding: 10px
+        }
+        
+        @media (min-width:768px) {
+            #post-tabs>li {
+                float: left;
+                margin-bottom: 0
+            }
+            #post-tabs>li>a {
+                border-radius: 0;
+                padding: 20px 25px
+            }
+        }
+        
+        @media (max-width:991px) and (min-width:768px) {
+            #post-tabs>li>a {
+                font-size: 14px;
+                padding: 20px 12px
+            }
+        }
+        
+        @media (max-width:768px) {
+            #post-tabs>li>a {
+                border: 0;
+                display: block;
+                color: #9ca4ac;
+                font-size: 16px;
+                padding: 10px;
+                text-align: center
+            }
+        }
+        
+        #post-tabs>li.active>a {
+            background: #fff;
+            color: #555
+        }
+        
+        #post-list::after,
+        #post-list::before {
+            content: " ";
+            display: table
+        }
+        
+        .arrow::after,
+        .clearfix::after,
+        .container-fluid::after,
+        .nav-drops::before,
+        .nav-tabs::after,
+        .navbar::after,
+        .overlay,
+        .row::after {
+            content: ""
+        }
+        
+        #post-list .post {
+            min-height: 210px
+        }
+        
+        figure img {
+            width: 100%
+        }
+        
+        @media (max-width:543px) {
+            .logo {
+                margin-top: -8px;
+                width: 189px!important;
+                height: 35px!important
+            }
+        }
+        
+        .pill {
+            color: #fff;
+            display: inline-block;
+            padding: 5px;
+            height: 18px;
+            line-height: 8px;
+            border-radius: 50px;
+            left: 82%;
+            font-weight: 700;
+            font-size: 14px
+        }
+        
+        .red {
+            background: #ee3948
+        }
+        
+        .m-r-0-5 {
+            margin-right: .3rem!important
+        }
+        
+        .m-b-0-5 {
+            margin-bottom: .5rem!important
+        }
+        
+        .m-t-0-7 {
+            margin-top: .7rem!important
+        }
+        
+        .p-y-0-5 {
+            padding-top: .5rem!important;
+            padding-bottom: .5rem!important
+        }
+        
+        .text-normal {
+            text-transform: none!important
+        }
+        
+        .pos-rel {
+            position: relative!important
+        }
+        
+        .c-button--shadow {
+            box-shadow: rgba(0, 0, 0, .2) 0 5px 15px
+        }
+        
+        .btn,
+        .site-header a {
+            text-decoration: none!important
+        }
+        
+        .site-header a {
+            font-weight: 400;
+            color: #fff;
+            font-size: 14px
+        }
+        
+        .site-header {
+            padding-left: 2%;
+            padding-right: 2%;
+            position: absolute;
+            width: 100%;
+            z-index: 1
+        }
+        
+        a.header-btn {
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            margin-top: 14px
+        }
+        
+        .hamburger-trigger {
+            margin-top: 23px;
+            margin-left: 12px;
+            margin-right: 12px;
+            z-index: 9999
+        }
+        
+        .hamburger-trigger a {
+            display: inline-block;
+            width: 1.813em;
+            height: 1.5em
+        }
+        
+        .hamburger-line {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 1.813em;
+            height: .25em;
+            opacity: 1;
+            background: #fff;
+            transform: rotate(0)
+        }
+        
+        .hamburger-line:nth-child(1) {
+            top: 0
+        }
+        
+        .hamburger-line:nth-child(2) {
+            top: .563em
+        }
+        
+        .hamburger-line:nth-child(3) {
+            top: 1.125em
+        }
+        
+        .nav-item {
+            position: relative
+        }
+        
+        .nav-drops {
+            background: #fff;
+            display: none;
+            position: absolute;
+            top: 2.875em;
+            left: -2em;
+            width: 192px;
+            padding: 15px 8px;
+            box-shadow: rgba(0, 0, 0, .28) -1px 2px 5px 0;
+            border-radius: .5em;
+            z-index: 9999
+        }
+        
+        .blog-featured,
+        .blog-featured .feature-contents,
+        .blog-featured .link,
+        .navbar,
+        sup {
+            position: relative
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: circle
+        }
+        
+        #bodyWrap {
+            padding-bottom: 80px
+        }
+        
+        .blog-featured {
+            background-size: 150%
+        }
+        
+        .blog-featured .link {
+            display: block;
+            padding: 8em 0 18em;
+            text-decoration: none
+        }
+        
+        .blog-featured .feature-title,
+        .blog-featured h2 {
+            margin: 8px 0
+        }
+        
+        body,
+        figure {
+            margin: 0
+        }
+        
+        h2,
+        h6,
+        p,
+        ul {
+            margin-top: 0
+        }
+        
+        .blog-featured h2 {
+            color: #fff;
+            font-size: 34px;
+            font-weight: 600;
+            line-height: 1.3em;
+            opacity: 1
+        }
+        
+        .blog-featured .feature-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #000;
+            display: inline-block;
+            line-height: 1.6em;
+            opacity: .5
+        }
+        
+        #post-nav {
+            background: #eaebed;
+            margin-bottom: 2em
+        }
+        
+        @media (min-width:992px) {
+            #post-nav {
+                margin-bottom: 5em
+            }
+        }
+        
+        @media (max-width:768px) {
+            .blog-featured h2 {
+                font-size: 24px
+            }
+            .blog-featured .link {
+                padding: 8em 0 18em
+            }
+        }
+        
+        .list-unstyled,
+        ul {
+            padding-left: 0
+        }
+        
+        @media (max-width:991px) and (min-width:767px) {
+            #post-nav {
+                margin-bottom: 3em
+            }
+        }
+        
+        @media (max-width:767px) {
+            li,
+            p {
+                font-size: 14px
+            }
+        }
+        
+        html {
+            font-family: sans-serif
+        }
+        
+        body,
+        h2,
+        h6 {
+            font-family: LatoRegular, sans-serif
+        }
+        
+        img {
+            border: 0
+        }
+        
+        p,
+        ul {
+            margin-bottom: 1rem
+        }
+        
+        figure,
+        header,
+        nav,
+        section {
+            display: block
+        }
+        
+        a {
+            background-color: transparent;
+            color: #00a3e9;
+            text-decoration: none;
+            touch-action: manipulation
+        }
+        
+        strong {
+            font-weight: 700
+        }
+        
+        .btn,
+        .small,
+        h2,
+        h6 {
+            font-weight: 400
+        }
+        
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            vertical-align: baseline;
+            top: -1.5em
+        }
+        
+        html {
+            text-size-adjust: 100%;
+            box-sizing: border-box;
+            font-size: 16px
+        }
+        
+        body {
+            width: 100%;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #373a3c;
+            background-color: #fff
+        }
+        
+        ul ul {
+            margin-bottom: 0
+        }
+        
+        .container,
+        .container-fluid {
+            margin-right: auto;
+            margin-left: auto
+        }
+        
+        h2,
+        h6 {
+            margin-bottom: .5rem;
+            line-height: 1.1;
+            color: #263139
+        }
+        
+        .btn,
+        .fa {
+            line-height: 1
+        }
+        
+        h2 {
+            font-size: 2rem
+        }
+        
+        h6 {
+            font-size: 1rem
+        }
+        
+        .small {
+            font-size: 80%
+        }
+        
+        .container-fluid::after,
+        .row::after {
+            display: table;
+            clear: both
+        }
+        
+        .container,
+        .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px
+        }
+        
+        @media (min-width:768px) {
+            .container {
+                width: 750px
+            }
+        }
+        
+        @media (min-width:992px) {
+            .container {
+                width: 970px
+            }
+        }
+        
+        @media (min-width:1200px) {
+            .container {
+                width: 1170px
+            }
+        }
+        
+        .row {
+            margin-right: -.9375rem;
+            margin-left: -.9375rem
+        }
+        
+        .col-md-10,
+        .col-md-4,
+        .col-sm-6,
+        .col-xs-12,
+        .col-xs-6 {
+            position: relative;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px
+        }
+        
+        .col-xs-12 {
+            width: 100%
+        }
+        
+        .col-xs-6 {
+            width: 50%
+        }
+        
+        @media (min-width:768px) {
+            .col-sm-6 {
+                float: left;
+                width: 50%
+            }
+        }
+        
+        @media (min-width:992px) {
+            .col-md-10,
+            .col-md-4 {
+                float: left
+            }
+            .col-md-10 {
+                width: 83.3333%
+            }
+            .col-md-4 {
+                width: 33.3333%
+            }
+            .col-md-offset-1 {
+                margin-left: 8.33333%
+            }
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ee3948;
+            border-radius: 5px;
+            padding: 1.333em 2.333em;
+            font-size: 1rem;
+            white-space: nowrap;
+            vertical-align: middle;
+            border: 1px solid transparent;
+            color: #fff!important
+        }
+        
+        .nav-tabs::after,
+        .navbar::after {
+            display: table
+        }
+        
+        .nav {
+            padding-left: 0;
+            margin-bottom: 0
+        }
+        
+        .nav-tabs {
+            border-bottom: 1px solid #ddd
+        }
+        
+        .navbar-nav .nav-item+.nav-item {
+            margin-left: 1rem
+        }
+        
+        .navbar {
+            padding: .5rem 1rem
+        }
+        
+        @media (min-width:544px) {
+            .navbar {
+                border-radius: .25rem
+            }
+        }
+        
+        .clearfix::after {
+            display: table
+        }
+        
+        .pull-xs-left {
+            float: left!important
+        }
+        
+        .pull-xs-right {
+            float: right!important
+        }
+        
+        .p-l-0 {
+            padding-left: 0!important
+        }
+        
+        .text-xs-right {
+            text-align: right!important
+        }
+        
+        .text-uppercase {
+            text-transform: uppercase!important
+        }
+        
+        .text-capitalize {
+            text-transform: capitalize!important
+        }
+        
+        .font-weight-bold {
+            font-weight: 700
+        }
+        
+        .m-t-1 {
+            margin-top: 1rem!important
+        }
+        
+        .m-b-2 {
+            margin-bottom: 1.5rem!important
+        }
+        
+        .p-x-2 {
+            padding-right: 1.5rem!important;
+            padding-left: 1.5rem!important
+        }
+        
+        .p-b-2 {
+            padding-bottom: 1.5rem!important
+        }
+        
+        .p-t-2 {
+            padding-top: 2.1rem!important
+        }
+        
+        @media (max-width:480px) {
+            .hidden-xs-down {
+                display: none!important
+            }
+        }
+        
+        @media (max-width:991px) {
+            .hidden-md-down {
+                display: none!important
+            }
+        }
+        
+        @media (min-width:992px) {
+            .hidden-lg-up,
+            .hidden-sm-down {
+                display: none!important
+            }
+        }
+    </style>
+
+    <style>
+        @font-face {
+            font-family: LatoRegular;
+            src: url(/static/font/lato/lato-regular-webfont.eot) format("eot"), url(/static/font/lato/lato-regular-webfont.woff) format("woff"), url(/static/font/lato/lato-regular-webfont.ttf) format("truetype")
+        }
+        
+        @font-face {
+            font-family: FontAwesome;
+            src: url(/static/lib/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"), url(/static/lib/fontawesome/fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"), url(/static/lib/fontawesome/fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"), url(/static/lib/fontawesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        .fa {
+            display: inline-block;
+            font-variant: normal;
+            font-stretch: normal;
+            font-family: FontAwesome;
+            font-size: inherit;
+            text-rendering: auto
+        }
+        
+        .fa-2x {
+            font-size: 2em
+        }
+        
+        .fa-chevron-down::before {
+            content: "\f078"
+        }
+        
+        .fa-angle-down::before {
+            content: "\f107"
+        }
+        
+        #sideNav a {
+            display: none;
+        }
+        
+        @media (max-width: 543px) {
+            .logo {
+                width: 189px !important;
+                height: 35px !important;
+                margin-top: -8px;
+            }
+        }
+        
+        .p-y-0-5 {
+            padding-top: .5rem !important;
+            padding-bottom: .5rem !important;
+        }
+        
+        .subscribe__form fieldset input {
+            width: 33.333% !important;
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .subscribe__form fieldset input {
+                width: 50% !important;
+            }
+        }
+        
+        @media only screen and (max-width: 425px) {
+            .subscribe__form fieldset input {
+                width: 100% !important;
+            }
+        }
+    </style>
+
+
+
+    <style>
+        .site-header a:hover {
+            color: inherit !important;
+        }
+        
+        a.header-btn:hover {
+            color: #38b6cd !important;
+        }
+        
+        .site-header {
+            z-index: 8 !important
+        }
+    </style>
+
+
+    <noscript>
+    <div style="position: fixed; top: 0px; left: 0px; z-index: 3000;
+            height: 100%; width: 100%; background-color: #FFFFFF">
+        <p style="margin-left: 10px">JavaScript is not enabled.</p>
+    </div>
+</noscript>
+
+</head>
+
+<body>
+
+    <section id="bodyWrap">
+
+        <section class="blog-featured" style="background: #9999 url(img/ultimate-min.png) no-repeat center bottom; background-size: 562px 281px; ">
+            <div class="container">
+
+                <a href="#" class="link feature-link" title="Read this post">
+
+
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+
+                            <div class="feature-contents">
+                                <span class="feature-title">
+                        Featured Ebook
+                      </span>
+                                <h2>
+                                    <span>
+                          <i class="fa fa-fw fa-book"></i> Ultimate Guide To Becoming A Successful Self-Employed Sales Professional
+                        </span>
+                                </h2>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section id="post-nav">
+            <div class="container">
+                <ul id="post-tabs" class="nav nav-tabs">
+                    <li><a href="https://www.commissioncrowd.com/sales-academy/">Sales Academy</a></li>
+                    <li><a href="https://www.commissioncrowd.com/blog/">Blog</a></li>
+                    <li class="active"><a href="https://www.commissioncrowd.com/ebooks/">Ebooks</a></li>
+                    <li><a href="https://www.commissioncrowd.com/webinars/">Webinars</a></li>
+                    <li><a href="https://www.commissioncrowd.com/experts-corner/">Expert's Corner</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="container">
+            <div id="post-list" class="tab-content">
+
+                <div class="tab-pane fade" id="ebooks">
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6 col-xs-6 post">
+                            <a href="https://www.commissioncrowd.com/ebooks/books/sales-recruiting-playbook/" class="post-box">
+
+                                <figure>
+                                    <img src="img/sales-cover-playbook-min.png" alt="" />
+                                </figure>
+
+                                <p>
+
+                                    <span class="category">
+                 <i class="fa fa-fw fa-book"></i>
+                    <em>Ebooks</em>
+                  </span>
+                                    <br /> Sales Recruiting Playbook: A Step-by-Step Guide to Recruiting Quality B2B Commission-Only Sales Reps
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-6 post">
+                            <a href="https://www.commissioncrowd.com/ebooks/books/it-starts-with-great-partnerships-how-to-build-successful-partnerships-with-freelance-sales-agents-on-a-commission-only-basis" class="post-box">
+
+                                <figure>
+                                    <img src="img/it-starts-with-great-partnerships-how-to-build-successful-partnerships-with-freelance-sales-agents-on-a-commission-only-basis-min.png" alt="" />
+                                </figure>
+
+                                <p>
+
+                                    <span class="category">
+                 <i class="fa fa-fw fa-book"></i>
+                    <em>Ebooks</em>
+                  </span>
+                                    <br /> It starts with great partnerships how to build successful partnerships with freelance sales agents on a commission-only basis
+                                </p>
+                            </a>
+                        </div>
+
+
+                        <div class="col-md-4 col-sm-6 col-xs-6 post">
+                            <a href="https://www.commissioncrowd.com/ebooks/books/five-point-plan-you-need-to-determine-if-independent-self-employed-sales-professionals-will-be-interested-in-working-with-your-company" class="post-box">
+
+                                <figure>
+                                    <img src="img/five-point-plan-you-need-to-determine-if-independent-self-employed-sales-professionals-will-be-interested-in-working-with-your-company-min.png" alt="" />
+                                </figure>
+
+                                <p>
+
+                                    <span class="category">
+                 <i class="fa fa-fw fa-book"></i>
+                    <em>Ebooks</em>
+                  </span>
+                                    <br /> 5 point plan you need to determine if Independent, self-employed sales professionals will be interested in working with your company
+                                </p>
+                            </a>
+                        </div>
+
+
+                        <div class="col-md-4 col-sm-6 col-xs-6 post">
+                            <a href="https://www.commissioncrowd.com/ebooks/books/the-ultimate-guide-to-becoming-a-successful-self-employed-independent-sales-rep" class="post-box">
+
+                                <figure>
+                                    <img src="img/the-ultimate-guide-to-becoming-a-successful-self-employed-independent-sales-rep-min.png" alt="" />
+                                </figure>
+
+                                <p>
+
+                                    <span class="category">
+                  <i class="fa fa-fw fa-book"></i>
+                    <em>Ebooks</em>
+                  </span>
+                                    <br /> Ultimate Guide To Becoming A Successful Self-Employed Sales Professional
+                                </p>
+                            </a>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xs-6 post">
+                            <a href="https://www.commissioncrowd.com/checklist-is-it-time-to-partner-with-your-first-salesperson/" class="post-box">
+
+
+                                <figure>
+                                    <img src="img/checklist-is-it-time-to-hire-your-first-independent-salesperson-min.png" alt="" />
+                                </figure>
+
+                                <p>
+
+                                    <span class="category">
+                  <i class="fa fa-fw fa-book"></i>
+                    <em>Ebooks</em>
+                  </span>
+                                    <br /> Checklist: Is It Time To Hire Your First Independent Salesperson?
+                                </p>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <style>
+        @media (max-width: 320px) {
+            .blog-featured {
+                background-size: 150% !important;
+            }
+        }
+    </style>
+
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="ico/favicon.png" />
+
+    <title>Closer Claus Login</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <!-- Color -->
+    <link id="skin" href="skins/default.css" rel="stylesheet" />
+  </head>
+  <body class="logreg-signin">
+    <!-- Start preloading -->
+    <div id="loading" class="loading-invisible">
+      <div class="loading-center">
+        <div class="loading-center-absolute">
+          <div class="object" id="object_four"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_one"></div>
+        </div>
+        <p>Please wait...</p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      document.getElementById("loading").className = "loading-visible";
+      var hideDiv = function () {
+        document.getElementById("loading").className = "loading-invisible";
+      };
+      var oldLoad = window.onload;
+      var newLoad = oldLoad
+        ? function () {
+            hideDiv.call(this);
+            oldLoad.call(this);
+          }
+        : hideDiv;
+      window.onload = newLoad;
+    </script>
+    <!-- End preloading -->
+
+    <!-- Start demo options -->
+    <!-- <div class="demo-panel">
+      <div class="demo-col">
+        <h5>Try Intheme with other template and color skins</h5>
+        <h6>Index variants</h6>
+        <select
+          onchange="location = this.options[this.selectedIndex].value;"
+          data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}'
+        >
+          <optgroup label="Corporate">
+            <option value="index-2.html">Corporate alt1</option>
+            <option value="index-corporate-alt1.html">Corporate alt2</option>
+            <option value="index-corporate-alt2.html">Corporate alt3</option>
+            <option value="index-corporate-alt3.html">Corporate alt4</option>
+            <option value="index-corporate-alt4.html">Corporate alt5</option>
+            <option value="index-corporate-alt5.html">Corporate alt6</option>
+            <option value="index-corporate-alt6.html">Corporate alt7</option>
+          </optgroup>
+          <optgroup label="Creative">
+            <option value="index-creative-alt1.html">Creative alt1</option>
+            <option value="index-creative-alt2.html">Creative alt2</option>
+            <option value="index-creative-alt3.html">Creative alt3</option>
+            <option value="index-creative-alt4.html">Creative alt4</option>
+            <option value="index-creative-alt5.html">Creative alt5</option>
+            <option value="index-creative-alt6.html">Creative alt6</option>
+            <option value="index-creative-alt7.html">Creative alt7</option>
+          </optgroup>
+          <optgroup label="Niche template">
+            <option value="index-niche-app.html">App</option>
+            <option value="index-niche-construction.html">Construction</option>
+            <option value="index-niche-ecommerce.html">Ecommerce</option>
+            <option value="index-niche-medical.html">Medical</option>
+            <option value="index-niche-photography.html">Photography</option>
+            <option value="index-niche-realestate.html">Real estate</option>
+            <option value="index-niche-restaurant.html">Restaurant</option>
+            <option value="index-niche-travel.html">Travel</option>
+          </optgroup>
+          <optgroup label="One page">
+            <option value="index-onepage-alt1.html">One page alt1</option>
+            <option value="index-onepage-alt2.html">One page alt1</option>
+            <option value="index-onepage-alt3.html">One page alt1</option>
+            <option value="index-onepage-alt4.html">One page alt1</option>
+          </optgroup>
+          <optgroup label="Landing page">
+            <option value="index-landingpage-alt1.html">
+              Landing page alt1
+            </option>
+            <option value="index-landingpage-alt2.html">
+              Landing page alt1
+            </option>
+            <option value="index-landingpage-alt3.html">
+              Landing page alt1
+            </option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="demo-col">
+        <h6>Color options</h6>
+        <ul class="stylechanger">
+          <li>
+            <a id="color1" href="#" data-skin="default.css"></a
+            ><span>Default</span>
+          </li>
+          <li>
+            <a id="color2" href="#" data-skin="yellow.css"></a
+            ><span>Yellow</span>
+          </li>
+          <li>
+            <a id="color4" href="#" data-skin="red.css"></a><span>Red</span>
+          </li>
+          <li>
+            <a id="color7" href="#" data-skin="pink.css"></a><span>Pink</span>
+          </li>
+          <li>
+            <a id="color8" href="#" data-skin="purple.css"></a
+            ><span>Purple</span>
+          </li>
+          <li>
+            <a id="color9" href="#" data-skin="blue.css"></a><span>Blue</span>
+          </li>
+          <li>
+            <a id="color11" href="#" data-skin="green.css"></a
+            ><span>Green</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <a class="openpanel" href="#" title=""></a> -->
+    <!-- End demo options -->
+
+    <!-- Start register -->
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="login-wrapp">
+              <div class="logreg-contain">
+                <div class="custom-tabs" data-effect-in="flipInX">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="active">
+                      <a href="#tab1" data-toggle="tab">Create account</a>
+                    </li>
+                    <li>
+                      <a href="#tab2" data-toggle="tab">Use social media</a>
+                    </li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab1">
+                      <form>
+                        <div class="form-group">
+                          <label
+                            >Username/Email :
+                            <span class="noempaty">*</span></label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Enter username or email address"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label
+                            >Password : <span class="noempaty">*</span></label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="exampleInputPassword1"
+                            placeholder="Enter your password"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary">
+                            Login
+                          </button>
+                        </div>
+                        <a href="#">Forgotten your password</a>
+                        <br />
+                        <span>Don't have an account </span
+                        ><a href="signup.html">Sign Up for Closer Claus</a>
+                      </form>
+                    </div>
+                    <div class="tab-pane fade" id="tab2">
+                      <div class="row">
+                        <div class="col-md-12 text-center">
+                          <h5>Login with social media account</h5>
+                          <p>
+                            <a
+                              href="#"
+                              class="btn btn-twitter btn-icon btn-block"
+                              >Signup with Gmail <i class="fa fa-google"></i
+                            ></a>
+                          </p>
+                          <p>
+                            <a
+                              href="#"
+                              class="btn btn-facebook btn-icon btn-block"
+                              >Signup with facebook
+                              <i class="fa fa-facebook"></i
+                            ></a>
+                          </p>
+                          <p>
+                            <a
+                              href="#"
+                              class="btn btn-instagram btn-icon btn-block"
+                              >Signup with Linkedin
+                              <i class="fa fa-linkedin"></i
+                            ></a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End register -->
+
+    <!-- Start to top -->
+    <a href="#" class="toTop">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+    <!-- End to top -->
+
+    <!-- START JAVASCRIPT -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootsnavs -->
+    <script src="js/bootsnav.js"></script>
+    <!-- Custom form -->
+    <script src="js/form/jcf.js"></script>
+    <script src="js/form/jcf.scrollable.js"></script>
+    <script src="js/form/jcf.select.js"></script>
+
+    <!-- Custom checkbox and radio -->
+    <script src="js/checkator/fm.checkator.jquery.js"></script>
+    <script src="js/checkator/setting.js"></script>
+
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+
+    <!-- Theme option-->
+    <script src="js/template-option/demosetting.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+div {
+  display: block;
+}
+
+.activity-wrap {
+  display: block;
+}
+
+.act-head {
+  display: inline-block;
+  float: left;
+}
+
+.filter-activity {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.pull-right {
+  float: right;
+}
+
+.field {
+  position: relative;
+  padding: 1px 3px 1px 1px;
+  padding-bottom: 5px;
+}
+
+.sel {
+  width: 100%;
+  padding: 0.23em 0.5em;
+  background: #fff;
+  border: 2px solid #bdc3c7;
+  color: #13202c;
+  font-size: 16px;
+  line-height: 14px;
+  transition-duration: 500ms;
+  text-transform: none;
+  font-family: inherit;
+  margin: 0;
+  overflow: visible !important;
+  align-items: center;
+}
+
+option {
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+
+.activity-body {
+  padding-right: 0;
+  padding-left: 0;
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  float: left;
+}
+
+table {
+  width: 99%;
+  font-size: 0.95em;
+  line-height: 1.34em;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+  border-color: grey;
+}
+
+table thead {
+  background: #f7f9f7;
+  border-bottom: solid 2px #aeb4b7;
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #f9fbf9;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f3f7f8;
+}
+
+/* table th:first-child {
+    padding: 8px;
+    padding-left: 8px;
+    border-top-left-radius: 2px;
+    font-family: LatoBold,"Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 1.04em;
+    font-style: bold;
+} */
+
+table th {
+  color: #2a3738;
+  height: 44px;
+  text-align: left;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+table td:first-child {
+  padding-left: 8px;
+}
+
+table td {
+  text-align: left;
+  height: 50px;
+  padding: 5px;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+.table-ico {
+  display: block;
+  color: #000;
+  line-height: 34px;
+  width: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+}

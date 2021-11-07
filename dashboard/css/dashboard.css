@@ -1,0 +1,168 @@
+.setup {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 111;
+  height: 185vh;
+}
+/* slider */
+#exampleSlider {
+  position: relative;
+  /* border: 1px solid black; */
+}
+@media (max-width: 767px) {
+  #exampleSlider {
+    border-color: transparent;
+  }
+}
+#exampleSlider .MS-content {
+  margin: 15px 5%;
+  overflow: hidden;
+  white-space: nowrap;
+  /* border: 1px solid red; */
+}
+@media (max-width: 767px) {
+  #exampleSlider .MS-content {
+    margin: 0;
+  }
+}
+#exampleSlider .MS-content .item {
+  display: inline-block;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  border-radius: 10px;
+  width: 30.5%;
+  background: #f5f2f2;
+  color: #000;
+  text-align: center;
+}
+#exampleSlider .MS-content .item h3 {
+  color: #f00;
+  margin-top: 80px;
+  padding: 0 15px;
+  white-space: normal;
+}
+/* #exampleSlider .MS-content .item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} */
+@media (max-width: 1200px) {
+  #exampleSlider .MS-content .item {
+    width: 25%;
+  }
+}
+@media (max-width: 992px) {
+  #exampleSlider .MS-content .item {
+    width: 33.3333%;
+  }
+}
+@media (max-width: 767px) {
+  #exampleSlider .MS-content .item {
+    width: 50%;
+  }
+}
+#exampleSlider .MS-content .item img {
+  width: 138px;
+  height: 138px;
+  margin-top: 40px;
+}
+#exampleSlider .MS-content .item p {
+  /* font-size: 30px; */
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
+  margin: 0;
+  padding: 10px 15px;
+  white-space: normal;
+  margin-top: 40px;
+  line-height: 2rem;
+}
+#exampleSlider .MS-controls button {
+  position: absolute;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  outline: 0;
+  top: 250px;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #exampleSlider .MS-controls button {
+    display: none;
+  }
+}
+#exampleSlider .MS-controls button:hover {
+  cursor: pointer;
+}
+#exampleSlider .MS-controls .MS-left {
+  left: 10px;
+}
+@media (max-width: 992px) {
+  #exampleSlider .MS-controls .MS-left {
+    left: -2px;
+  }
+}
+#exampleSlider .MS-controls .MS-right {
+  right: 10px;
+}
+@media (max-width: 992px) {
+  #exampleSlider .MS-controls .MS-right {
+    right: -2px;
+  }
+}
+/*
+Parallax
+=========================== */
+.padding-bot50 {
+  padding-bottom: 50px !important;
+}
+.parallax {
+  position: relative;
+  padding: 80px 0;
+  margin: 0 auto;
+  overflow-y: visible;
+  width: 100%;
+  z-index: 3;
+  color: #fff;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: 50% 0 no-repeat fixed;
+}
+
+.parallax .title-head,
+.cd-section .title-head {
+  color: #fff;
+}
+
+.parallax .overlay {
+  background-color: #1e1e1e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  z-index: 1;
+}
+
+.parallax .content-parallax {
+  position: relative;
+  z-index: 2;
+}
+
+.parallax .content-parallax h1,
+.parallax .content-parallax h2,
+.parallax .content-parallax h3,
+.parallax .content-parallax h4,
+.parallax .content-parallax h5,
+.parallax .content-parallax h6 {
+  color: #fff;
+}

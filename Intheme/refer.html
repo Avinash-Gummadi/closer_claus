@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+
+
+
+    <title>Referral Program | CommissionCrowd</title>
+
+    <link href="css/style1.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet">
+    <link href="css/style2_pandi.css" rel="stylesheet">
+
+<style>
+    html {
+        overflow-x: hidden
+    }
+
+    .arrow::after,
+    .container-fluid::after,
+    .row::after {
+        content: ""
+    }
+
+    .CustomerLogos,
+    .btn,
+    .call-to-action,
+    .pageheading h1,
+    .pageheading h6,
+    .pill {
+        text-align: center
+    }
+
+    .list-unstyled,
+    .nav {
+        list-style: none
+    }
+
+    .col-xs-12,
+    .col-xs-6,
+    .navbar-nav .nav-item {
+        float: left
+    }
+
+    @media (max-width:543px) {
+        .logo {
+            margin-top: -8px;
+            width: 189px !important;
+            height: 35px !important
+        }
+    }
+
+    .call-to-action {
+        padding-top: 12px;
+        padding-bottom: 28px;
+        background: #f3f6fb
+    }
+
+    @media screen and (max-width:1000px) {
+        .call-to-action {
+            padding-bottom: 24px
+        }
+    }
+
+    .red {
+        background: #ee3948
+    }
+
+    .pill {
+        color: #fff;
+        display: inline-block;
+        padding: 5px;
+        height: 18px;
+        line-height: 8px;
+        border-radius: 50px;
+        left: 82%;
+        font-weight: 700;
+        font-size: 14px
+    }
+
+    .main-content {
+        background: #fff
+    }
+
+    .middle-button {
+        margin: auto
+    }
+
+    .container-small {
+        max-width: 850px;
+        display: block;
+        clear: both;
+        margin: 0 auto
+    }
+
+    .m-r-0-5 {
+        margin-right: .3rem !important
+    }
+
+    .m-b-0-5 {
+        margin-bottom: .5rem !important
+    }
+
+    .m-t-0-7 {
+        margin-top: .7rem !important
+    }
+
+    .p-y-0-5 {
+        padding-top: .5rem !important;
+        padding-bottom: .5rem !important
+    }
+
+    .text-normal {
+        text-transform: none !important
+    }
+
+    .pos-rel {
+        position: relative !important
+    }
+
+    .z-3 {
+        z-index: 2
+    }
+
+    @media (max-width:550px) {
+        h1 {
+            font-size: 25px
+        }
+    }
+
+    .c-button--shadow {
+        box-shadow: rgba(0, 0, 0, .2) 0 5px 15px
+    }
+
+    .btn,
+    .site-header a {
+        text-decoration: none !important
+    }
+
+    .subscribe__toggle,
+    a {
+        text-decoration: none
+    }
+
+    .CustomerLogos {
+        padding: 36px 0 0
+    }
+
+    .CustomerLogos ul {
+        margin-bottom: 30px
+    }
+
+    .CustomerLogos li {
+        list-style-type: none;
+        margin-bottom: 15px
+    }
+
+    .CustomerLogo-item {
+        display: inline-block;
+        margin: 4px 2px;
+        vertical-align: middle
+    }
+
+    .Logo {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: auto 100%
+    }
+
+    .Logo-cloudswave,
+    .Logo-forbes,
+    .Logo-nextstartup,
+    .Logo-salesexpo2016,
+    .Logo-startupdaily,
+    .Logo-thehuffingtonpostgreysmall {
+        height: 38px;
+        width: 135px
+    }
+
+    @media (max-width:480px) {
+        .Logo {
+            background-repeat: no-repeat;
+            background-size: auto 80%
+        }
+    }
+
+    .Logo-nextstartup {
+        background-image:url(/static/img/logo/nextstartup-min.png)
+    }
+
+    .Logo-salesexpo2016 {
+        background-image:url(/static/img/logo/salesexpo2016-min.png)
+    }
+
+    .Logo-thehuffingtonpostgreysmall {
+        background-image:url(/static/img/logo/thehuffingtonpostgreysmall-min.png)
+    }
+
+    .Logo-startupdaily {
+        background-image:url(/static/img/logo/startup-daily-min.png)
+    }
+
+    .Logo-forbes {
+        background-image:url(/static/img/logo/forbes-min.png)
+    }
+
+    .Logo-cloudswave {
+        background-image:url(/static/img/logo/cloudwave-min.png)
+    }
+
+    .subscribe-1 input[type=text]::-webkit-input-placeholder {
+        color: #000
+    }
+
+    .site-header {
+        padding-left: 2%;
+        padding-right: 2%;
+        position: absolute;
+        width: 100%;
+        z-index: 1
+    }
+
+    .site-header a {
+        font-weight: 400;
+        color: #fff;
+        font-size: 14px
+    }
+
+    a.header-btn {
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        margin-top: 14px
+    }
+
+    .hamburger-trigger {
+        margin-top: 23px;
+        margin-left: 12px;
+        margin-right: 12px;
+        z-index: 9999
+    }
+
+    .hamburger-trigger a {
+        display: inline-block;
+        width: 1.813em;
+        height: 1.5em
+    }
+
+    .hamburger-line {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 1.813em;
+        height: .25em;
+        opacity: 1;
+        background: #fff;
+        transform: rotate(0)
+    }
+
+    .hamburger-line:nth-child(1) {
+        top: 0
+    }
+
+    .hamburger-line:nth-child(2) {
+        top: .563em
+    }
+
+    .hamburger-line:nth-child(3) {
+        top: 1.125em
+    }
+
+    .referral-img {
+        max-width: 100%
+    }
+
+    .nav-item {
+        position: relative
+    }
+
+    .nav-drops {
+        background: #fff;
+        display: none;
+        position: absolute;
+        top: 2.875em;
+        left: -2em;
+        width: 192px;
+        padding: 15px 8px;
+        box-shadow: rgba(0, 0, 0, .28) -1px 2px 5px 0;
+        border-radius: .5em;
+        z-index: 9999
+    }
+
+    .pageheading h1 {
+        color: #fff;
+        font-size: 42px;
+        line-height: 60px;
+        margin-top: 0;
+        letter-spacing: .3px
+    }
+
+    .pageheading h6 {
+        font-size: 20px;
+        line-height: 1.4
+    }
+
+    button {
+        border: 0
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: circle
+    }
+
+    .subscribe-1 {
+        font-family: Roboto, sans-serif;
+        position: relative;
+        width: 18em;
+        height: 5em;
+        padding: 1em .75em;
+        border: 3px solid transparent;
+        border-radius: 8px;
+        overflow: hidden
+    }
+
+    .subscribe-1 input[type=text] {
+        font-family: Roboto, sans-serif;
+        color: #000;
+        width: 72%;
+        height: 100%;
+        margin-right: 1%;
+        padding-left: .5em;
+        padding-right: .5em;
+        font-size: 1.1rem;
+        border: 0;
+        outline: 0
+    }
+
+    .subscribe-1 button,
+    .subscribe__toggle {
+        font-family: Roboto, sans-serif;
+        background: #ee3948;
+        color: #fff
+    }
+
+    .col-xs-12,
+    .money,
+    body {
+        width: 100%
+    }
+
+    .subscribe-1 button {
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        border: 0;
+        border-radius: 4px;
+        font-size: .8em
+    }
+
+    .subscribe__wrapper {
+        height: 100%;
+        display: flex
+    }
+
+    .subscribe__toggle {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        line-height: 70px;
+        position: absolute;
+        text-align: center;
+        font-size: 1.1em;
+        border-radius: 4px
+    }
+
+    .subscribe .alert-message {
+        position: absolute;
+        font-size: 12px;
+        left: 22px;
+        bottom: 6px;
+        color: #e24548
+    }
+
+    .navbar,
+    sup {
+        position: relative
+    }
+
+    @media (max-width:768px) {
+        .pageheading h1 {
+            color: #fff;
+            text-align: center;
+            margin-top: 0;
+            letter-spacing: .3px;
+            font-size: 24px !important;
+            line-height: 36px !important
+        }
+    }
+
+    .pageheading h6 {
+        color: #fff
+    }
+
+    @media (max-width:767px) {
+
+        li,
+        p {
+            font-size: 14px
+        }
+    }
+
+    .money {
+        background:url(/static/img/refer/referral-program-min.jpg);
+        animation: scroll 100s linear infinite;
+        top: 0;
+        left: 0;
+        height: 100%
+    }
+
+    #money-scroll {
+        padding: 200px 0 140px
+    }
+
+    .list-unstyled,
+    ul {
+        padding-left: 0
+    }
+
+    @-webkit-keyframes scroll {
+        100% {
+            background-position: 0 -3000px
+        }
+    }
+
+    @keyframes scroll {
+        100% {
+            background-position: 0 -3000px
+        }
+    }
+
+    html {
+        font-family: sans-serif
+    }
+
+    img {
+        border: 0;
+        vertical-align: middle
+    }
+
+    p,
+    ul {
+        margin-bottom: 1rem;
+        margin-top: 0
+    }
+
+    header,
+    main,
+    nav,
+    section {
+        display: block
+    }
+
+    a {
+        background-color: transparent;
+        color: #00a3e9
+    }
+
+    strong {
+        font-weight: 700
+    }
+
+    h1 {
+        margin: .67em 0
+    }
+
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        vertical-align: baseline;
+        top: -1.5em
+    }
+
+    button,
+    input {
+        font-style: inherit;
+        font-variant: inherit;
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        margin: 0;
+        line-height: inherit;
+        border-radius: 0
+    }
+
+    .btn,
+    .small,
+    h1,
+    h4,
+    h6 {
+        font-weight: 400
+    }
+
+    body,
+    h1,
+    h4,
+    h6 {
+        font-family: LatoRegular, sans-serif
+    }
+
+    button {
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: button
+    }
+
+    html {
+        text-size-adjust: 100%;
+        box-sizing: border-box;
+        font-size: 16px
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: inherit
+    }
+
+    body {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #373a3c;
+        background-color: #fff
+    }
+
+    ul ul {
+        margin-bottom: 0
+    }
+
+    a,
+    button,
+    input {
+        touch-action: manipulation
+    }
+
+    h1,
+    h4,
+    h6 {
+        margin-top: 0;
+        margin-bottom: .5rem;
+        line-height: 1.1;
+        color: inherit
+    }
+
+    .btn,
+    .fa {
+        line-height: 1
+    }
+
+    h1 {
+        font-size: 2.2rem
+    }
+
+    h4 {
+        font-size: 1.5rem
+    }
+
+    h6 {
+        color: #263139;
+        font-size: 1rem
+    }
+
+    .small {
+        font-size: 80%
+    }
+
+    .container-fluid::after,
+    .row::after {
+        display: table;
+        clear: both
+    }
+
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    .row {
+        margin-right: -.9375rem;
+        margin-left: -.9375rem
+    }
+
+    .col-md-5,
+    .col-sm-12,
+    .col-xs-12,
+    .col-xs-6 {
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px
+    }
+
+    .col-xs-6 {
+        width: 50%
+    }
+
+    @media (min-width:768px) {
+        .col-sm-12 {
+            float: left;
+            width: 100%
+        }
+    }
+
+    @media (min-width:992px) {
+        .col-md-5 {
+            float: left;
+            width: 41.6667%
+        }
+
+        .col-md-offset-1 {
+            margin-left: 8.33333%
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        background: #ee3948;
+        border-radius: 5px;
+        padding: 1.333em 2.333em;
+        font-size: 1rem;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        color: #fff !important;
+        width: 56%;
+    }
+
+    .clearfix::after,
+    .navbar::after {
+        display: table;
+        clear: both;
+        content: ""
+    }
+
+    .nav {
+        padding-left: 0;
+        margin-bottom: 0
+    }
+
+    .navbar-nav .nav-item+.nav-item {
+        margin-left: 1rem
+    }
+
+    .navbar {
+        padding: .5rem 1rem
+    }
+
+    @media (min-width:544px) {
+        .navbar {
+            border-radius: .25rem
+        }
+    }
+
+    .pull-xs-left {
+        float: left !important
+    }
+
+    .pull-xs-right {
+        float: right !important
+    }
+
+    .p-l-0 {
+        padding-left: 0 !important
+    }
+
+    .text-xs-right {
+        text-align: right !important
+    }
+
+    .text-xs-center {
+        text-align: center !important
+    }
+
+    .text-uppercase {
+        text-transform: uppercase !important
+    }
+
+    .text-capitalize {
+        text-transform: capitalize !important
+    }
+
+    .font-weight-bold {
+        font-weight: 700
+    }
+
+    .m-t-1 {
+        margin-top: 1rem !important
+    }
+
+    .m-t-2 {
+        margin-top: 1.5rem !important
+    }
+
+    .m-b-2 {
+        margin-bottom: 1.5rem !important
+    }
+
+    .p-t-1 {
+        padding-top: 1rem !important
+    }
+
+    .p-x-2 {
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important
+    }
+
+    .p-b-2 {
+        padding-bottom: 1.5rem !important
+    }
+
+    .p-t-2 {
+        padding-top: 2.1rem !important
+    }
+
+    .p-t-6 {
+        padding-top: 6rem !important
+    }
+
+    .p-y-3 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important
+    }
+
+    @media (max-width:480px) {
+        .hidden-xs-down {
+            display: none !important
+        }
+    }
+
+    @media (min-width:768px) {
+        .text-md-left {
+            text-align: left !important
+        }
+    }
+
+    @media (max-width:991px) {
+        .hidden-md-down {
+            display: none !important
+        }
+    }
+
+    @media (min-width:992px) {
+
+        .hidden-lg-up,
+        .hidden-sm-down {
+            display: none !important
+        }
+    }
+</style>
+
+<style>
+    @font-face {
+        font-family: LatoRegular;
+        src:url(/static/font/lato/lato-regular-webfont.eot) format("eot"),
+        url(/static/font/lato/lato-regular-webfont.woff) format("woff"),
+        url(/static/font/lato/lato-regular-webfont.ttf) format("truetype")
+    }
+
+    @font-face {
+        font-family: FontAwesome;
+        src:url(/static/lib/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"),
+        url(/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"),
+        url(/static/lib/fontawesome/fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"),
+        url(/static/lib/fontawesome/fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"),
+        url(/static/lib/fontawesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
+
+    .fa {
+        display: inline-block;
+        font-variant: normal;
+        font-stretch: normal;
+        font-family: FontAwesome;
+        font-size: inherit;
+        text-rendering: auto
+    }
+
+    .fa-2x {
+        font-size: 2em
+    }
+
+    .fa-chevron-down::before {
+        content: "\f078"
+    }
+
+    .fa-angle-down::before {
+        content: "\f107"
+    }
+
+    #sideNav a {
+        display: none;
+    }
+
+    @media (max-width: 543px) {
+        .logo {
+            width: 189px !important;
+            height: 35px !important;
+            margin-top: -8px;
+        }
+    }
+
+    .p-y-0-5 {
+        padding-top: .5rem !important;
+        padding-bottom: .5rem !important;
+    }
+
+    .subscribe__form fieldset input {
+        width: 33.333% !important;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .subscribe__form fieldset input {
+            width: 50% !important;
+        }
+    }
+
+
+    @media only screen and (max-width: 425px) {
+        .subscribe__form fieldset input {
+            width: 100% !important;
+        }
+    }
+</style>
+
+
+
+<style>
+    .site-header a:hover {
+        color: inherit !important;
+    }
+
+    a.header-btn:hover {
+        color: #38b6cd !important;
+    }
+
+    .site-header {
+        z-index: 8 !important
+    }
+</style>
+
+
+<noscript>
+    <div style="position: fixed; top: 0px; left: 0px; z-index: 3000;
+            height: 100%; width: 100%; background-color: #FFFFFF">
+        <p style="margin-left: 10px">JavaScript is not enabled.</p>
+    </div>
+</noscript>
+
+
+</head>
+
+<body>
+
+    <main class="main-content pos-rel z-3">
+
+
+        <style>
+            .money {
+            background: url("img/referral-program-min.jpg");
+            -webkit-animation: 100s scroll infinite linear;
+            -moz-animation: 100s scroll infinite linear;
+            -o-animation: 100s scroll infinite linear;
+            -ms-animation: 100s scroll infinite linear;
+            animation: 100s scroll infinite linear;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #money-scroll {
+    padding: 200px 0 140px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-small {
+    max-width: 850px;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+}
+
+
+        </style>
+
+        <section class="money">
+            <div class="container-small container" id="money-scroll">
+                <div class="">
+                    <div class="pageheading">
+                        <h1>Refer companies to us and we'll pay you</h1>
+                        <h6>Become a CommissionCrowd affiliate and enjoy high commissions and lifetime residuals!</h6>
+                        <div class="middle-button text-center p-t-1">
+                            <a class="big btn hover" target="_blank" href="#">Register To
+                                Automatically Enroll<br><small>(Existing members check your account for details)</small></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="CustomerLogos">
+            <div class="content-wrap">
+                <h6 class="ui-Heading" size="small" color="light" margin="large">We've been featured by these great
+                    companies : </h6>
+            </div>
+            <ul>
+                <li>
+                    <span class="CustomerLogo-item"><i class="Logo Logo-forbes"></i></span>
+                    <span class="CustomerLogo-item"><i class="Logo Logo-thehuffingtonpostgreysmall"></i></span>
+                    <span class="CustomerLogo-item"><i class="Logo Logo-nextstartup hidden-xs-down"></i></span>
+                    <span class="CustomerLogo-item"><i class="Logo Logo-salesexpo2016 hidden-xs-down"></i></span>
+                    <span class="CustomerLogo-item"><i class="Logo Logo-guardian"></i></span>
+                    <span class="CustomerLogo-item"><i class="Logo Logo-startupdaily hidden-xs-down"></i></span>
+                </li>
+            </ul>
+        </section>
+
+        <div class="container-fluid text-xs-center pos-rel">
+            <div class="col-md-6 col-md-offset-3 p-y-3">
+                <h2 class="colorify-cash">Become A CommissionCrowd Affiliate</h2>
+                <p>Help us spread the word and earn high commissions just by telling your contacts about CommissionCrowd</p>
+            </div>
+
+            <div class="container-fluid p-t-3 p-b-5">
+                <div class="col-md-5 col-md-offset-1 text-xs-center">
+                    <div class="p-t-2 p-t-xs-0">
+                        <h2 class="colorify-cash">EARN</h2>
+                        <h1 class="colorify-cash xl">15%</h1>
+                        <h4 class="colorify-cash"><em>COMMISSION</em></h4>
+                        <h4 class="colorify-cash">per referral + lifetime residuals</h4>
+                    </div>
+                </div>
+                <div class="col-md-5 p-t-6">
+                    <h4>Send business our way and earn 15% commission + Residuals</h4>
+                    <p>Join our powerful affiliate program and you'll be given everything you need to spread the word and
+                        drive traffic to CommissionCrowd. You'll earn 15% commission per referral and residuals every year
+                        they renew their membership.</p>
+
+                    <div class="middle-button text-center p-t-1">
+                        <a class="big btn hover" target="_blank" href="https://www.commissioncrowd.com/app#/login/">Register To
+                            Automatically Enroll<br><small>(Existing members check your account for
+                                details)</small></a>
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+
+    <div class="container-fluid text-xs-center bg-cash p-y-3 affiliates-earn pos-rel">
+        <div class="col-md-6 col-md-offset-3 p-y-3">
+            <h2 class="colorify-cash">How our referral program works: Personal Recommendations are powerful!</h2>
+            <p>Earn rewards by sharing your unique link with clients.</p>
+        </div>
+        <div class="col-md-6 p-t-3">
+            <img src="/static/img/refer/earn-rewards-by-sharing-a-unique-link-min.png"
+                alt="Earn rewards by sharing you're unique link with clients">
+            <h5 class="colorify-cash m-t-3">Join Our Free Affiliate Program</h5>
+            <p class="m-t-1">It couldn't be easier to earn with us! Join the free CommissionCrowd affiliate program and
+                make your way through our short course. We'll get you set up with everything you need to start earning
+                referral commissions fast!</p>
+        </div>
+        <div class="col-md-6 p-y-3">
+            <img src="/static/img/refer/users-click-on-your-unique-link-min.png"
+                alt="Users click on your unique link">
+            <h5 class="colorify-cash m-t-3">Users click on your unique link</h5>
+            <p class="m-t-1">Companies reach CommissionCrowd via your unique referral link. We then take care of the
+                rest. Our dedicated customer success team will nurture your referrals and help them decide which
+                membership is right for them.
+
+                You'll be paid your referral commissions once that company has registered and paid for their account.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="signup-cta text-center">
+        <h2 class="colorify-cash">Share the love &amp; start earning.</h2>
+        <h5 class="colorify">Become a Referral Elite today!</h5>
+        <div class="middle-button text-center p-t-1">
+            <a class="big btn hover" target="_blank" href="https://www.commissioncrowd.com/app#/login/">Register To
+                Automatically Enroll<br><small>(Existing members check your account for details)</small></a>
+
+
+        </div>
+        <a href="https://www.commissioncrowd.com/terms/" class="small colorify-black">Read the Terms and
+            Conditions for full details.</a>
+    </div>
+    </div>
+
+
+</main>
+
+</body>
+</html>

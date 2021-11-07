@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="ico/favicon.png" />
+
+    <title>FAQ's | Closer Claus</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Layerslider -->
+    <link href="layerslider/css/layerslider.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style2.css" />
+
+    <!-- Color -->
+    <link id="skin" href="skins/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Start preloading -->
+    <div id="loading" class="loading-invisible">
+      <div class="loading-center">
+        <div class="loading-center-absolute">
+          <div class="object" id="object_four"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_one"></div>
+        </div>
+        <p>Please wait...</p>
+      </div>
+    </div>
+    <script type="text/javascript">
+      document.getElementById("loading").className = "loading-visible";
+      var hideDiv = function () {
+        document.getElementById("loading").className = "loading-invisible";
+      };
+      var oldLoad = window.onload;
+      var newLoad = oldLoad
+        ? function () {
+            hideDiv.call(this);
+            oldLoad.call(this);
+          }
+        : hideDiv;
+      window.onload = newLoad;
+    </script>
+    <!-- End preloading -->
+    <!-- Start top -->
+    <div class="top-wrapp">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- <ul class="top-share">
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End top -->
+    <div class="clearfix"></div>
+
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default navbar-sticky white bootsnav">
+      <!-- Start Top Search -->
+      <div class="top-search">
+        <div class="container">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search" />
+            <span class="input-group-addon close-search"
+              ><i class="fa fa-times"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <!-- End Top Search -->
+
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar-menu"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand" href="index.html"
+            ><img src="img/icon-big.jpg" class="logo" alt=""
+          /></a>
+        </div>
+        <!-- End Header Navigation -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul
+            class="nav navbar-nav navbar-right"
+            data-in="fadeInDown"
+            data-out="fadeOutUp"
+          >
+            <!-- <li class="dropdown active">
+              <a
+                href="opportunities.html"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                >Opportunities</a
+              >
+            </li> -->
+            <li class="dropdown active">
+              <a
+                href="companies.html"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                >Companies</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="how-to-start-for-companies.html">
+                    Guide To Getting Started
+                    <br />
+                    <em
+                      >How To Get Started On Your Journey To Building A
+                      Successful B2B Commission-only Sales Team For Your
+                      Company</em
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="site-map.html">
+                    Industry Statistics
+                    <br />
+                    <em>See Our Live Sales Agent Stats</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="companies-how-it-works.html">
+                    How It Works?
+                    <br />
+                    <em
+                      >Building Your Independent Sales Team And Start Making
+                      Sales In Four Easy Steps</em
+                    >
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                >Sales Agent</a
+              >
+              <ul class="dropdown-menu">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    >Guide To Getting Started
+                    <br />
+                    <em>How To Get Started with Closer Claus</em>
+                  </a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                    >How It Works?
+                    <br />
+                    <em>Build Your Ultimate Inde Sales Portfolio</em>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown megamenu-fw">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                >Resources</a
+              >
+              <ul class="dropdown-menu megamenu-content" role="menu">
+                <li>
+                  <div class="row">
+                    <div class="col-menu col-md-3">
+                      <h6 class="title">Interactive</h6>
+                      <div class="content">
+                        <ul class="menu-col">
+                          <li>
+                            <a href="call-to-action.html">Call to action</a>
+                          </li>
+                          <li><a href="counter.html">Counter</a></li>
+                          <li><a href="maps.html">Google maps</a></li>
+                          <li>
+                            <a href="media-responsive.html">Media responsive</a>
+                          </li>
+                          <li><a href="modal.html">Modal</a></li>
+                          <li><a href="process.html">Process</a></li>
+                          <li><a href="progress.html">Progress bar</a></li>
+                          <li><a href="pricing.html">Pricing</a></li>
+                          <li><a href="team.html">Team</a></li>
+                          <li><a href="testimoni.html">Testimoni</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <div class="col-menu col-md-3">
+                      <h6 class="title">Elements</h6>
+                      <div class="content">
+                        <ul class="menu-col">
+                          <li><a href="accordion.html">Accordion</a></li>
+                          <li><a href="alert.html">Alert</a></li>
+                          <li><a href="button.html">Button</a></li>
+                          <li><a href="form.html">Form</a></li>
+                          <li><a href="icon.html">Icons style</a></li>
+                          <li><a href="icon-box.html">Icons with box</a></li>
+                          <li><a href="icon-text.html">Icons with text</a></li>
+                          <li><a href="images.html">Images style</a></li>
+                          <li><a href="pagination.html">Pagination</a></li>
+                          <li><a href="tab.html">Tab style</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <div class="col-menu col-md-3">
+                      <h6 class="title">Typography & MLsc</h6>
+                      <div class="content">
+                        <ul class="menu-col">
+                          <li><a href="typography.html">Typography</a></li>
+                          <li><a href="heading.html">Heading</a></li>
+                          <li><a href="blockquote.html">Blockquote</a></li>
+                          <li><a href="columns.html">Columns</a></li>
+                          <li><a href="divider.html">Separators</a></li>
+                          <li><a href="dropcaps.html">Dropcaps</a></li>
+                          <li><a href="highlights.html">Highlights</a></li>
+                          <li><a href="list.html">List style</a></li>
+                          <li><a href="maps.html">Maps</a></li>
+                          <li><a href="modal.html">Modal</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- end col-3 -->
+                    <div class="col-menu col-md-3">
+                      <h6 class="title">Extra page</h6>
+                      <div class="content">
+                        <ul class="menu-col">
+                          <li><a href="error404.html">Error 404</a></li>
+                          <li><a href="maintenance.html">Maintenance</a></li>
+                          <li><a href="signin.html">Signin</a></li>
+                          <li><a href="signup.html">Signup</a></li>
+                          <li>
+                            <a href="underconstruction.html"
+                              >Underconstruction alt1</a
+                            >
+                          </li>
+                          <li>
+                            <a href="underconstruction-alt1.html"
+                              >Underconstruction alt2</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- end col-3 -->
+                  </div>
+                  <!-- end row -->
+                </li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Pricing</a></li>
+            <!-- <ul class="top-link"> -->
+            <li>
+              <a href="signup.html"><i class="fa fa-lock"></i>Register</a>
+            </li>
+            <li>
+              <a href="signin.html" class="login"
+                ><i class="fa fa-sign-in"></i> Login</a
+              >
+            </li>
+            <!-- </ul> -->
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </nav>
+    <!-- End Navigation -->
+
+    <div class="clearfix"></div>
+
+    <!-- Start slider -->
+    <div id="slider-wrapper">
+      <div class="hero">
+        <h2>The Ultimate Commission-Only B2B Sales Platform</h2>
+        <p>A collection of some of the most frequently asked questions</p>
+        <!-- <form class="hero-section" method="post">
+          <div class="hero_components">
+            <select class="no_border_outline">
+              <option value="">Company</option>
+              <option value="">FreeLancer</option>
+            </select>
+          </div>
+          <div class="hero_components">
+            <input
+              type="text"
+              class="no_border_outline heroinput"
+              placeholder="My email address is "
+            />
+          </div>
+          <button
+            type="button"
+            class="hero_components herobtn no_border_outline btn btn-primary"
+          >
+            JOIN NOW
+          </button>
+        </form> -->
+        <div class="cmpy_hero">
+          <!-- <p>We've been featured by these great thoughts :</p> -->
+          <img src="img/object01.png" alt="" />
+          <img src="img/object02.png" alt="" />
+          <img src="img/object03.png" alt="" />
+          <img src="img/object04.png" alt="" />
+          <img src="img/object05.png" alt="" />
+        </div>
+        <!-- <div class="flex">
+          <div class="">
+            <h3>I'm a Company</h3>
+            <a href="#" class="herolink btn btn-primary"
+              >Looking For FreeLancer</a
+            >
+          </div>
+          <div class="">
+            <h3>I'm a FreeLancer</h3>
+            <a href="#" class="herolink btn btn-primary"
+              >Looking For Opportunities</a
+            >
+          </div>
+        </div> -->
+        <div class="more_about_cmpy">
+          <a href="#">
+            <p class="text-center">Find out more about Closer Claus</p>
+            <span class="fas fa-angle-down"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End slider -->
+
+    <div class="clearfix"></div>
+    <div class="container flex">
+      <div class="left-float divider">
+        <h4>How to get started for companies</h4>
+        <p>
+          Getting started with CommissionCrowd is easy! Simply follow our 'How
+          It Works For Companies' guide or follow the steps below to start
+          building your independent sales team.
+        </p>
+        <h5>
+          Step 1: Register and complete the sales opportunity registration form
+          Sign Up
+        </h5>
+        <p>
+          We then review your sales opportunity and contact you to give feedback
+          and guidance so it's as attractive to sales reps as possible. After
+          we're happy your opportunity is attractive and positioned correctly.
+        </p>
+        <h5>
+          Step 2: Complete payment to activate your account and start connecting
+          with self-employed sales professionals
+        </h5>
+        <p>
+          Once your company's sales opportunity has been approved and your
+          membership has been paid for, your account becomes live and sales
+          opportunity activated. Your account is now active and fully searchable
+          by sales agents. You are also now able to search and contact the
+          agents you wish to work with directly. You begin reaching out and
+          having meaningful conversations with top performing, 100%
+          commission-only sales professionals globally.
+        </p>
+        <h5>
+          Step 3: Start working with your perfect sales agents anywhere in the
+          world
+        </h5>
+        <p>
+          Your conversations with sales reps have now progressed and you choose
+          the agents you want to contract with and approve them in app.
+          CommissionCrowd gives you the ability to easily manage multiple remote
+          working partnerships with the sales agents you choose to add to your
+          team. You're able to communicate instantly, provide training materials
+          and important documents for your agents to instantly access without
+          having to wait for emails or login to 3rd party software. Raise
+          invoices, manage your sales pipeline, never have to rely on manual
+          reporting of sales activity again.
+        </p>
+        <h5>
+          Step 4: Pay your sales agents their commissions quickly and easily
+          when new business closes
+        </h5>
+        <p>
+          When your sales agents closes new business for your company you pay
+          their commissions directly through CommissionCrowd plus an additional
+          1% commission to us (coming soon). Easy, cost effective, quick and all
+          taken care of for you.
+        </p>
+      </div>
+      <div class="right-float divider">
+        <div class="one side-div">
+          <h4>How It Works For Companies</h4>
+          <p>You'll find specific information on joining Closer Claus here</p>
+          <a href="#">See how it works</a>
+        </div>
+        <div class="two side-div">
+          <h4>Web Chat</h4>
+          <p>Have questions that haven't been answered here? Start a</p>
+          <a href="#">Live Chat</a>
+        </div>
+        <div class="three side-div">
+          <h4>Blog</h4>
+          <p>
+            Featuring interesting Independent sales rep related articles, member
+            interviews, news, tips and featured commission-only sales
+            opportunities.
+          </p>
+          <a href="#">See all articles</a>
+        </div>
+        <img src="img/companies.jpg" alt="" class="ads" />
+        <img src="img/freelancer.jpg" alt="" class="ads" />
+      </div>
+    </div>
+    <div class="bg">
+      <p class="text-center">
+        Try it yourself. Join the world's fastest growing B2B independent sales
+        network today
+      </p>
+      <form class="hero-section text-center" method="post">
+        <div class="hero_components">
+          <select class="no_border_outline">
+            <option value="">Company</option>
+            <option value="">FreeLancer</option>
+          </select>
+        </div>
+        <div class="hero_components">
+          <input
+            type="text"
+            class="no_border_outline heroinput"
+            placeholder="My email address is "
+          />
+        </div>
+        <button
+          type="button"
+          class="hero_components herobtn no_border_outline btn btn-primary"
+        >
+          JOIN NOW
+        </button>
+      </form>
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- Start icon inline -->
+    <div class="container">
+      <ul class="icon-boxline">
+        <li class="bg1">
+          <div class="containt">
+            <i class="fa fa-briefcase icon-circle fa-2x"></i>
+            <h5>Companies</h5>
+            <p>
+              A collection of some of the most frequent questions asked by
+              companies
+            </p>
+            <p><a href="#" class="btn btn-link">15 Articles</a></p>
+          </div>
+        </li>
+        <li class="bg2">
+          <div class="containt">
+            <i class="fa fa-headphones icon-circle fa-2x"></i>
+            <h5>Sales Agents</h5>
+            <p>
+              A collection of some of the most frequent questions asked by
+              Independent sales professionals
+            </p>
+            <p><a href="#" class="btn btn-link">7 Articles</a></p>
+          </div>
+        </li>
+        <li class="bg3">
+          <div class="containt">
+            <i class="fa fa-magic icon-circle fa-2x"></i>
+            <h5>General</h5>
+            <p>
+              A collection of some of the most frequent questions relating to
+              the CommissionCrowd platform
+            </p>
+            <p><a href="#" class="btn btn-link">8 Articles</a></p>
+          </div>
+        </li>
+        <!-- <li class="bg4">
+          <div class="containt">
+            <i class="fa fa-send icon-circle fa-2x"></i>
+            <h5>High loyalty</h5>
+            <p>
+              Debet error everti ex pri, an vis soluta alienum intellegat sit no
+              nibh fabulas pri modo tibique.
+            </p>
+            <p><a href="#" class="btn btn-link">Learn more</a></p>
+          </div>
+        </li> -->
+        <li class="bg5">
+          <div class="containt">
+            <i class="fa fa-heart icon-circle fa-2x"></i>
+            <h5>Definitions</h5>
+            <p>
+              A collection of industry specific questions and answers relating
+              to the B2B commission-only sales industry
+            </p>
+            <p><a href="#" class="btn btn-link">6 Articles</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- End icon inline -->
+    <div class="clearfix"></div>
+
+    <!-- Start contain wrapp -->
+    <div class="contain-wrapp padding-bot60">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="title-head centered">
+              <h4>Get help from industry experts</h4>
+              <p>
+                Our team of industry experts are here to help! We strive for
+                smiles.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="icon-linner">
+              <!-- <li> -->
+              <!-- <ul> -->
+              <li>
+                <i class="fa fa-pencil fa-3x"></i>
+                <h5>Blog Articles</h5>
+                <!-- <p>
+                  Consul aperiam eruditi ex eam scripta tamquam gubergren ut, te
+                  case timeam eos.
+                </p> -->
+                <a href="#">See how it works</a>
+              </li>
+              <li>
+                <i class="fa fa-line-chart fa-3x"></i>
+                <h5>How It Works</h5>
+                <!-- <p>
+                  Consul aperiam eruditi ex eam scripta tamquam gubergren ut, te
+                  case timeam eos.
+                </p> -->
+                <a href="#">See all articles</a>
+              </li>
+              <li>
+                <i class="fa fa-laptop fa-3x"></i>
+                <h5>Chat With Us</h5>
+                <!-- <p>
+                  Consul aperiam eruditi ex eam scripta tamquam gubergren ut, te
+                  case timeam eos.
+                </p> -->
+                <a href="#">Talk to a team member</a>
+              </li>
+              <!-- </ul> -->
+              <!-- </li> -->
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- <p class="text-center">
+          <strong>
+            UK Number: +44 020 3884 1131 | USA Number: +1 210 899 3232 | French
+            Number: +33 (1) 85644565
+          </strong>
+          Number for Sales: Press 1 | Number for Support: Press 2
+        </p> -->
+      </div>
+    </div>
+    <!-- End contain wrapp -->
+    <!-- Start call to action -->
+    <div class="cta-wrapp cta-primary text-center padding-bot40 subscribe">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>
+              Try it yourself. <a href="#">Join</a> the world's fastest growing
+              B2B independent sales network today
+            </h4>
+          </div>
+          <div class="col-md-6 col-md-offset-3">
+            <!-- Start Subscribe -->
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your email address..."
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Subscribe</button>
+              </span>
+            </div>
+            <p>Stay up date with our latest news!</p>
+            <!-- End Subscribe -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End call to action -->
+    <div class="clearfix"></div>
+
+    <!-- Start footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div class="widget">
+              <h5>About Closer Claus</h5>
+              <a href="index.html" class="foot-index">
+                <img src="img/icon-big.jpg" class="marginbot15" alt="" />
+              </a>
+              <!-- <p>
+                Eu pro ponderum gloriatur, cu lorem denique pri, soleat
+                interesset no usu. Mel tota melius antiopam ex. Novum iuvaret
+                principes ut vis, at mei tollit convenire.
+              </p> -->
+              <div class="">
+                <a href="#"><i class="fa fa-facebook fa-2x icon-square"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-2x icon-square"></i></a>
+                <a href="#"
+                  ><i class="fa fa-google-plus fa-2x icon-square"></i
+                ></a>
+                <a href="#"
+                  ><i class="fa fa-instagram fa-2x icon-square"></i
+                ></a>
+                <a href="#"><i class="fa fa-linkedin fa-2x icon-square"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="widget">
+              <h5>Home</h5>
+              <ul class="list-icons link-list">
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">For Companies</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">For Sales Agents</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Pricing</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="widget">
+              <h5>FACTS & STATS</h5>
+              <ul class="list-icons link-list">
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Expert's Corner</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Our Agent Stats</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">FAQ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="widget">
+              <h5>RESOURCES</h5>
+              <ul class="list-icons link-list">
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Sales Training Courses</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Ebooks</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Webinars</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="widget">
+              <h5>USEFUL</h5>
+              <ul class="list-icons link-list">
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Refer a Company</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Media Kit</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-double-right"></i>
+                  <a href="#">Sitemap</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subfooter">
+        <p>
+          2021 &copy; Copyright
+          <a href="https://weblaunch.in">WebLaunch.</a> All rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- Start to top -->
+    <a href="#" class="toTop">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+    <!-- End to top -->
+    <!-- START JAVASCRIPT -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing-1.3.min.js"></script>
+
+    <!-- Bootsnavs -->
+    <script src="js/bootsnav.js"></script>
+
+    <!-- Custom form -->
+    <script src="js/form/jcf.js"></script>
+    <script src="js/form/jcf.scrollable.js"></script>
+    <!-- <script src="js/form/jcf.select.js"></script> -->
+
+    <!-- Custom checkbox and radio -->
+    <script src="js/checkator/fm.checkator.jquery.js"></script>
+    <script src="js/checkator/setting.js"></script>
+
+    <!-- LayerSlider script files -->
+    <script src="layerslider/js/greensock.js"></script>
+    <script src="layerslider/js/layerslider.transitions.js"></script>
+    <script src="layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+    <script>
+      jQuery("#layerslider").layerSlider({
+        responsive: false,
+        layersContainer: 1920,
+        responsiveUnder: 1920,
+        skin: "fullwidth",
+        navButtons: false,
+        navStartStop: false,
+        hoverPrevNext: false,
+        skinsPath: "layerslider/skins/",
+      });
+    </script>
+
+    <!-- masonry -->
+    <script src="js/masonry/masonry.min.js"></script>
+    <script src="js/masonry/masonry.filter.js"></script>
+    <script src="js/masonry/setting.js"></script>
+
+    <!-- Parallax -->
+    <script src="js/parallax/jquery.parallax-1.1.3.js"></script>
+    <script src="js/parallax/setting.js"></script>
+
+    <!-- Video Background -->
+    <script src="js/background-video/jquery.background-video.js"></script>
+    <script src="js/background-video/setting.js"></script>
+
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+
+    <!-- Theme option-->
+    <script src="js/template-option/demosetting.js"></script>
+    <script src="js/multislider.min.js"></script>
+    <script>
+      $("#exampleSlider").multislider({
+        interval: 4000,
+        slideAll: true,
+        duration: 1500,
+      });
+    </script>
+  </body>
+</html>

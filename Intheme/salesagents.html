@@ -1,0 +1,2083 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+
+    <title>Connect companies and independent sales agents | CommissionCrowd</title>
+
+    <meta name="description" content="Commissioncrowd is a platform for companies looking for independent commission-only sales agents and for self employed sales agents to find a unique opportunity." />
+
+    <link href="css/style1.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet">
+    <style>
+        .site-header-white {
+            background: #fff;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        .site-header-transparent {
+            background: transparent;
+            z-index: 10;
+            width: 100%;
+            position: absolute;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        .subfooter {
+            background: transparent;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        .site-header {
+            background: transparent;
+            z-index: 10;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+
+        .site-header-white a {
+            color: #3677a1;
+        }
+
+        .site-header-transparent a {
+            color: #fff;
+        }
+
+        .site-header a {
+            color: #36495d;
+            font-size: 16px;
+            text-decoration: none
+        }
+
+        .site-header a:hover {
+            color: #3677a1;
+        }
+
+        .site-header-white a:hover {
+            color: #293148;
+        }
+
+        a.header-btn {
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            -webkit-transition: background .2s ease;
+            transition: background .2s ease;
+            margin-top: 14px;
+        }
+
+        a.header-btn-white {
+            color: #36495d;
+            border: 2px solid #36495d;
+            border-radius: 10px;
+            -webkit-transition: background .2s ease;
+            transition: background .2s ease;
+            margin-top: 14px;
+        }
+
+        a.header-btn:hover {
+            background: #fff;
+            color: #3677a1;
+        }
+
+        a.header-btn-white:hover {
+            background: #293148;
+            border: 2px solid #293148;
+            color: #fff;
+        }
+
+        .hamburger-trigger {
+            margin-top: 35px;
+            margin-left: 15px;
+            margin-right: 15px;
+            z-index: 9999;
+        }
+
+        .hamburger-trigger-white {
+            background-color: #fff;
+            margin-top: 35px;
+            margin-left: 15px;
+            margin-right: 15px;
+            z-index: 9999;
+        }
+
+        .hamburger-trigger a {
+            cursor: pointer;
+            display: inline-block;
+            width: 1.813em;
+            height: 1.5em;
+        }
+
+        .hamburger-line {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 1.813em;
+            height: .25em;
+            overflow: hidden;
+            opacity: 1;
+            background: #fff;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+
+        .hamburger-line:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger-line:nth-child(2) {
+            top: .563em;
+        }
+
+        .hamburger-line:nth-child(3) {
+            top: 1.125em;
+        }
+
+        .active .hamburger-line {
+            background: #fff;
+        }
+
+        .active .hamburger-line:nth-child(1) {
+            top: .688em;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .active .hamburger-line:nth-child(2) {
+            width: 0;
+            left: 50%;
+        }
+
+        .active .hamburger-line:nth-child(3) {
+            top: .688em;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .hamburger-line-white {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 1.813em;
+            height: .25em;
+            overflow: hidden;
+            opacity: 1;
+            background: #293148;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
+        }
+
+        .hamburger-line-white:nth-child(1) {
+            top: 0;
+            background: #293148;
+        }
+
+        .hamburger-line-white:nth-child(2) {
+            top: .563em;
+            background: #293148;
+        }
+
+        .hamburger-line-white:nth-child(3) {
+            top: 1.125em;
+            background: #293148;
+        }
+
+        #js-off-canvas {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 4;
+            width: 0;
+            height: 100%;
+            box-shadow: -7px 0px 23px 0px rgba(0, 0, 0, 0.23);
+            overflow: hidden;
+            background: #2a3148;
+            -webkit-transition: width .3s ease;
+            transition: width .3s ease;
+            overflow-y: auto;
+        }
+
+        #js-off-canvas.active {
+            width: 80%;
+        }
+
+        #js-off-canvas li {
+            line-height: 1.3;
+        }
+
+        #js-off-canvas a {
+            display: block;
+            width: 75%;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-drops {
+            display: none;
+            position: absolute;
+            top: 2.875em;
+            left: -1em;
+            width: 290px;
+            padding: 15px 8px;
+            background: #fff;
+            box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.28);
+            border-radius: .5em;
+            z-index: 9999;
+        }
+
+        .nav-drops:before {
+            display: block;
+            position: absolute;
+            top: -.625em;
+            left: 3em;
+            content: "";
+            width: 0;
+            height: 0;
+            margin: 0 0 0 -.625em;
+            border-left: .625em solid transparent;
+            border-right: .625em solid transparent;
+            border-bottom: .625em solid white;
+        }
+
+        .nav-double {
+            width: 805px;
+            left: -25em;
+        }
+
+        .nav-double:before {
+            left: 27em;
+        }
+
+        .nav-drops li {
+            line-height: 1.1
+        }
+
+        .nav-drops li a {
+            font-size: 15px;
+            color: #3677a1;
+            margin-left: 10px;
+            padding: 10px 8px 10px 8px;
+            display: block;
+            font-weight: bold;
+            border-radius: 8px;
+            -webkit-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+        }
+
+        .nav-drops li:not(.title) a:hover {
+            background: #f2f1ef;
+            color: #7f7f7f;
+        }
+
+        .nav-drops li.title a {
+            color: #3677a1;
+        }
+
+        .nav-drops li.title a::after {
+            width: 30px;
+            height: 2px;
+            background: #3677a1;
+            content: "";
+            margin: 0;
+            display: block;
+            position: relative;
+            top: 5px;
+        }
+
+        .nav-item:hover .nav-drops {
+            display: block;
+        }
+
+        .text-normal {
+            text-transform: none !important;
+        }
+
+        .arrow:after {
+            display: inline-block;
+            position: relative;
+            content: "";
+            margin-left: .643em;
+            width: .5em;
+            height: .643em;
+            background: url(../img/dropdown-arrow.png) no-repeat center right;
+        }
+
+        hr {
+            width: 100%;
+            height: 1px;
+            background: #ddd;
+            border: 0;
+        }
+
+        @media (max-width: 767px) {}
+
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .nav-drop-img li {
+            height: 165px;
+        }
+
+        .nav-drop-img:first-child,
+        .nav-drop-img:nth-child(2) {
+            border-right: 2px solid #ddd;
+        }
+
+        .nav-drop-img img {
+            max-width: 100%;
+            display: block;
+            height: 44px;
+            margin: auto;
+        }
+
+        .nav-drop-img a.header-btn {
+            display: inline-block;
+            border-radius: 1.538em;
+            -webkit-transition: background .2s ease;
+            transition: background .2s ease;
+            margin-top: 14px;
+        }
+
+        .nav-drop-img a.header-btn.in-roads-btn {
+            color: #7b868d;
+            border: 2px solid #7b868d;
+        }
+
+        .nav-drop-img a.header-btn.in-roads-btn:hover,
+        .nav-drop-img a.header-btn.in-roads-btn:focus {
+            color: #fff !important;
+            border: 2px solid #7b868d;
+            background-color: #7b868d;
+        }
+
+        .nav-drop-img a.header-btn.experts-corner-btn {
+            color: #5779bd;
+            border: 2px solid #5779bd;
+        }
+
+        .nav-drop-img a.header-btn.experts-corner-btn:hover,
+        .nav-drop-img a.header-btn.experts-corner-btn:focus {
+            color: #fff !important;
+            border: 2px solid #5779bd;
+            background-color: #5779bd;
+        }
+
+        .nav-drop-img a.header-btn.sales-academy-btn {
+            color: #5abe82;
+            border: 2px solid #5abe82;
+        }
+
+        .nav-drop-img a.header-btn.sales-academy-btn:hover,
+        .nav-drop-img a.header-btn.sales-academy-btn:focus {
+            color: #fff !important;
+            border: 2px solid #5abe82;
+            background-color: #5abe82;
+        }
+
+        .login-signup {
+            border-left: 2px solid #36495d;
+        }
+
+        .login-signup-white {
+            border-left: 2px solid #293148;
+        }
+
+        .login-signup-transparent {
+            border-left: 2px solid #fff;
+        }
+
+        @media (max-width: 991px) {
+
+            .login-signup,
+            .login-signup-white,
+            .login-signup-transparent {
+                border-left: none !important;
+            }
+        }
+
+        @media(max-width: 1280px) {
+            .logo img {
+                width: 200px !important;
+                height: 40px;
+                margin-left: 18px;
+            }
+
+            .site-header a,
+            .site-header-white a,
+            .site-header-transparent a {
+                font-size: 15px;
+            }
+
+            .nav-double {
+                width: 805px;
+                left: -15em;
+            }
+
+            .nav-double:before {
+                left: 17em;
+            }
+        }
+
+        #js-off-canvas .nav-drop-img a {
+            width: 100%;
+        }
+
+        #js-off-canvas a.header-btn {
+            width: 100%;
+        }
+
+        #js-off-canvas hr {
+            width: 80%;
+            background: rgba(255, 255, 255, .15);
+        }
+
+        #js-off-canvas .nav-drop-img:first-child,
+        #js-off-canvas .nav-drop-img:nth-child(2) {
+            border: none;
+        }
+
+        #js-off-canvas a.header-btn:hover {
+            background: #fff;
+            color: #3677a1 !important;
+        }
+
+        .site-header-white .nav-drops {
+            box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, 0.28) !important;
+        }
+
+        .site-header-white .nav-drops:before {
+            border-bottom: .625em solid #efefef;
+        }
+
+        .site-header-transparent .nav-item>a,
+        .site-header-transparent .login {
+            color: #fff !important;
+        }
+
+        .site-header-transparent .login-signup {
+            border-left: 2px solid #fff !important;
+        }
+
+        .site-header-transparent .nav-item>a:hover,
+        .site-header-transparent .login:hover {
+            color: rgba(245, 245, 245, 0.72) !important;
+        }
+
+        .site-header-white .hamburger-line {
+            background: #3677a1;
+        }
+
+        .site-header-white .hamburger-trigger.active .hamburger-line {
+            background: #fff;
+        }
+
+        @font-face {
+            font-family: LatoRegular;
+            src:url(/static/font/lato/lato-regular-webfont.eot) format("eot"),
+            url(/static/font/lato/lato-regular-webfont.woff) format("woff"),
+            url(/static/font/lato/lato-regular-webfont.ttf) format("truetype")
+        }
+
+        @font-face {
+            font-family: FontAwesome;
+            src:url(/static/lib/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"),
+            url(/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"),
+            url(/static/lib/fontawesome/fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"),
+            url(/static/lib/fontawesome/fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"),
+            url(/static/lib/fontawesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+
+        .fa {
+            display: inline-block;
+            font-variant: normal;
+            font-stretch: normal;
+            font-family: FontAwesome;
+            font-size: inherit;
+            text-rendering: auto
+        }
+
+        .fa-2x {
+            font-size: 2em
+        }
+
+        .fa-chevron-down::before {
+            content: "\f078"
+        }
+
+        .fa-angle-down::before {
+            content: "\f107"
+        }
+
+        @font-face {
+            font-family: themify;
+            src:url(/static/font/themify_162a16fe.eot#iefix-fvbane) format("embedded-opentype"),
+            url(/static/font/themify_7b299bc5.woff) format("woff"),
+            url(/static/font/themify_7b299bc5.ttf) format("truetype"),
+            url(/static/font/themify_7b299bc5.svg#themify) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+
+        [class^=ti-] {
+            font-family: themify;
+            speak: none;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            text-transform: none
+        }
+
+        .ti-user::before {
+            content: "\e602"
+        }
+
+        .ti-stats-up::before {
+            content: "\e673"
+        }
+
+        .ti-notepad::before {
+            content: "\e67c"
+        }
+
+        .ti-money::before {
+            content: "\e68c"
+        }
+
+        .ti-id-badge::before {
+            content: "\e699"
+        }
+
+        .ti-book::before {
+            content: "\e6b7"
+        }
+
+        #sideNav a {
+            display: none;
+        }
+
+        @media (max-width: 543px) {
+            .logo {
+                width: 189px !important;
+                height: 35px !important;
+                margin-top: -8px;
+            }
+        }
+
+        .p-y-0-5 {
+            padding-top: .5rem !important;
+            padding-bottom: .5rem !important;
+        }
+    </style>
+    <style>
+        .footerlabel {
+            display: inline-block !important;
+            margin-left: 10px !important;
+            padding: 0 7px !important;
+            height: 20px !important;
+            line-height: 20px !important;
+            vertical-align: middle !important;
+            font-size: 0.8em !important;
+            background: #01AB6B !important;
+            color: #fff !important;
+            border-radius: 3px !important;
+            text-decoration: none !important;
+        }
+    </style>
+
+    <noscript>
+        <div style="position: fixed; top: 0px; left: 0px; z-index: 3000;
+                height: 100%; width: 100%; background-color: #FFFFFF">
+            <p style="margin-left: 10px">JavaScript is not enabled.</p>
+        </div>
+    </noscript>
+
+    <style>
+        .more-content {display:none;}
+        .visible {display:block;}
+        .red {background: #00a6ff;}
+        .subscribe__toggle{background: #00a6ff;}
+        .hero {background-image: url('img/landlords-hero-background-min-1.jpg') !important;}
+            
+            
+        .banner-last {
+            background: #e9d16f url(/static/img/candle.png) center no-repeat;
+            
+            padding: 20px;
+        }
+        .banner-last p {
+            margin: 0;
+            color: #041e37;
+            line-height: 20px;
+            font-weight: 400;
+            font-size: 15px;
+            text-align: left;
+        }		
+        </style>
+
+    <style>
+        .title-h1{font-size: 2.4rem;}
+        *,.container>div,::after,::before{box-sizing:inherit}.arrow::after,.btn-base::after,.container-fluid::after,.row::after,.select-outer::after{content:""}.list-unstyled,.nav{list-style:none}@media (max-width:543px){.logo{margin-top:-8px;width:189px!important;height:35px!important}}.pill{color:#fff;display:inline-block;padding:5px;height:18px;line-height:8px;border-radius:50px;left:82%;font-weight:700;font-size:14px}.red{background:#ee3948}.hamburger-line,.main-content{background:#fff}.colorify-dark-blue{color:#263139!important}.m-r-0-5{margin-right:.3rem!important}.m-b-0-5{margin-bottom:.5rem!important}.m-t-0-7{margin-top:.7rem!important}.p-y-0-5{padding-top:.5rem!important;padding-bottom:.5rem!important}.text-normal{text-transform:none!important}.pos-rel{position:relative!important}.more-content{display:none}.text-center{text-align:center!important}@media (max-width:550px){h1{font-size:25px}}.c-button--shadow{box-shadow:rgba(0,0,0,.2) 0 5px 15px}.btn,.site-header a{text-decoration:none!important}.site-header a{font-weight:400;color:#fff;font-size:14px}.site-header{padding-left:2%;padding-right:2%;position:absolute;width:100%;z-index:1}a.header-btn{color:#fff;border:2px solid #fff;border-radius:10px;margin-top:14px}.hamburger-trigger{margin-top:23px;margin-left:12px;margin-right:12px;z-index:9999}.hamburger-trigger a{display:inline-block;width:1.813em;height:1.5em}.hamburger-line{display:block;position:absolute;left:0;width:1.813em;height:.25em;opacity:1;transform:rotate(0)}.hero-master-referral-circle,.nav-drops{display:none}.hamburger-line:nth-child(1){top:0}.hamburger-line:nth-child(2){top:.563em}.hamburger-line:nth-child(3){top:1.125em}.nav-item{position:relative}.nav-drops{position:absolute;top:2.875em;left:-2em;width:192px;padding:15px 8px;box-shadow:rgba(0,0,0,.28) -1px 2px 5px 0;border-radius:.5em;z-index:9999}.hero-master,.pill{text-align:center}@media screen and (min-width:720px){.hero-master-referral-circle{position:fixed;display:block;width:130px;top:40%;margin-top:145px;left:32px;box-shadow:rgba(0,0,0,.2) 0 0 10px;border-radius:130px;z-index:99}.hero-master-referral-circle img{width:100%}}.hero-master{width:100%;position:relative;padding:150px 16px 440px;background-size:cover;background-color:#157afb}@media (max-width:991px){.hero-master{padding:150px 16px 500px}}.hero-master .hero-master-heading{position:relative;font-weight:100;margin:auto;font-size:42px;line-height:1.2;color:#fff}.hero-master .hero-master-subheading{position:relative;font-size:20px;margin:auto;padding:20px 0;line-height:1.4;max-width:900px;color:#fff}@media (min-width:1200px){.hero-master .hero-master-heading{padding:0 160px}}@media screen and (max-width:720px){.hero-master.homepage{padding:120px 24px 60px}.hero-master .hero-master-heading{font-size:24px}.hero-master .hero-master-subheading{font-size:16px;line-height:1.5;max-width:1000px}}button{border:0}.d-flex-block{width:100%;flex:1 1 0%}.c-image{height:auto;max-width:100%}ul{margin:0;padding:0;list-style-type:circle}.form-inline-input{background-color:transparent}.form-bar{border-radius:4px;width:100%;font-weight:500}.form-bar .form-group{border-right:2px solid #efefef;vertical-align:top;background-color:#fff;border-radius:4px;height:70px;overflow:hidden}.form-bar .form-group-btn,.form-inline-input{background-color:transparent}@media (min-width:768px){.form-bar .form-group{border-radius:0}.form-bar .form-group:first-child{border-radius:4px 0 0 4px}.form-bar .form-group:last-child{border-radius:0 4px 4px 0}}.form-bar .form-group:nth-last-child(-1n+2){border:none}@media (min-width:768px){.form-bar{display:inline-table}.form-bar.two-field .form-group{width:50%}.form-bar .btn{border-radius:0 4px 4px 0}.form-bar .form-group{display:table-cell}}.form-bar .btn{height:70px;min-width:100%}.form-inline-label{font-size:12px;padding:10px 20px 0;font-weight:500;width:100%;margin-bottom:0;color:#272727;text-align:left}.form-inline-input{padding:0 20px;border:none;width:100%;font-size:18px;line-height:normal;color:#616161;outline:0}.form-inline-input option{color:#616161;font-weight:300;padding-left:20px;padding-right:20px}.btn-base{color:#fff;border-color:transparent;z-index:1;background:#ee3948}.select-outer{position:relative}.select-outer::after{position:absolute;top:10px;right:15px;border-width:7px 6px;border-style:solid;border-color:#ee3948 transparent transparent}.btn-base,.btn-base span{position:relative}.btn-base span{z-index:3}.btn-base::after{position:absolute;top:0;left:0;width:100%;height:100%;border-radius:27px;z-index:2;opacity:0}.navbar,sup{position:relative}.select-outer .form-inline-input{margin-top:0;padding-left:20px;outline:0;-webkit-appearance:none;color:#ee3948}
+        .Australia,.Canada,.Germany{background:url(/static/img/stats/sprites-min.png);width:70px;height:47px;display:block;margin:0 auto 20px}.Australia{background-position:-78px -102px!important}.Canada{background-position:-447px -151px!important}.Germany{background-position:-2px -350px!important}.Ghana{background-position:-520px -300px!important}.India{background:url(/static/img/stats/sprites_1-min.png);width:70px;height:47px;display:block;margin:0 auto 20px}.India{background-position:-300px -3px!important}.United-Kingdom,.Usa{background:url(/static/img/stats/sprites_2-min.png);width:70px;height:47px;display:block;margin:0 auto 20px}.United-Kingdom{background-position:-223px -202px!important}.Usa{background-position:-151px -202px!important}.col-xs-12,body{width:100%}#counFilter1>li{font-size:medium;vertical-align:top;float:none!important;display:none}.container>div,img{vertical-align:middle}.col-xs-12,.col-xs-6,.navbar-nav .nav-item{float:left}.grid-item{-webkit-box-flex:0;flex:0 1 14.28%}.searchMsg{color:#333;margin-bottom:20px}@media only screen and (max-width:580px){.grid-item{flex-basis:50%;flex-grow:1}}.grid-item a{padding:10px 20px}.grid-item a span{display:block;font-size:12px;text-align:center;font-weight:500;color:#263139}.animated{animation-duration:1s;animation-fill-mode:both}@-webkit-keyframes fadeInLeft{0%{opacity:0;transform:translate3d(-100%,0,0)}100%{opacity:1;transform:none}}@keyframes fadeInLeft{0%{opacity:0;transform:translate3d(-100%,0,0)}100%{opacity:1;transform:none}}.fadeInLeft{animation-name:fadeInLeft}@-webkit-keyframes bounceIn{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.05)}70%{transform:scale(.9)}100%{opacity:1;transform:scale(1)}}@keyframes bounceIn{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1.05)}70%{transform:scale(.9)}100%{opacity:1;transform:scale(1)}}.bounceIn{animation-name:bounceIn}@media (max-width:767px){li,p{font-size:14px}}@media (min-width:1400px){.hero-master{width:100%;position:relative;padding:200px 16px 140px;background-size:cover;background-color:#157afb;overflow:hidden}}.list-unstyled,ul{padding-left:0}html{font-family:sans-serif}img{border:0}p,ul{margin-bottom:1rem;margin-top:0}label{margin-bottom:.5rem;display:inline-block}header,main,nav,section{display:block}a{background-color:transparent;color:#00a3e9;text-decoration:none}strong{font-weight:700}h1{margin:.67em 0}sup{font-size:75%;line-height:0;vertical-align:baseline;top:-1.5em}button,input,select{font-style:inherit;font-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:inherit;font-family:inherit;color:inherit;margin:0;line-height:inherit;border-radius:0}.btn,.small,h1,h5,h6{font-weight:400}body,h1,h5,h6{font-family:LatoRegular,sans-serif}button{overflow:visible;-webkit-appearance:button}button,select{text-transform:none}html{text-size-adjust:100%;box-sizing:border-box;font-size:16px;overflow-x:hidden}body{margin:0;font-size:1rem;line-height:1.5;color:#373a3c;background-color:#fff}ul ul{margin-bottom:0}a,button,input,label,select{touch-action:manipulation}h1,h5,h6{margin-top:0;margin-bottom:.5rem;line-height:1.1;color:inherit}h1{font-size:2.2rem}h5{font-size:1.25rem;line-height:1.4}.btn,.fa{line-height:1}h6{color:#263139;font-size:1rem}.small{font-size:80%}.container-fluid::after,.row::after{display:table;clear:both}.container-fluid{padding-left:15px;padding-right:15px;margin-right:auto;margin-left:auto}.row{margin-right:-.9375rem;margin-left:-.9375rem}.col-lg-10,.col-md-2,.col-md-4,.col-md-8,.col-md-9,.col-sm-12,.col-sm-4,.col-sm-6,.col-xs-12,.col-xs-6,.col-md-3{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-6{width:50%}@media (min-width:768px){.col-sm-12,.col-sm-4,.col-sm-6{float:left}.col-sm-12{width:100%}.col-sm-6{width:50%}.col-sm-4{width:33.3333%}}@media (min-width:992px){.col-md-2,.col-md-4,.col-md-8,.col-md-9,.col-md-3{float:left}.col-md-3{width: 25%}.col-md-9{width:75%}.col-md-8{width:66.6667%}.col-md-4{width:33.3333%}.col-md-2{width:16.6667%}.col-md-offset-2{margin-left:16.6667%}}@media (min-width:1200px){.col-lg-10{float:left;width:83.3333%}}.form-group{margin-bottom:1rem}.btn{display:inline-block;background:#ee3948;border-radius:5px;padding:1.333em 2.333em;font-size:1rem;text-align:center;white-space:nowrap;vertical-align:middle;border:1px solid transparent;color:#fff!important}.clearfix::after,.navbar::after{display:table;clear:both;content:""}.nav{padding-left:0;margin-bottom:0}.navbar-nav .nav-item+.nav-item{margin-left:1rem}.navbar{padding:.5rem 1rem}@media (min-width:544px){.navbar{border-radius:.25rem}}.pull-xs-left{float:left!important}.pull-xs-right{float:right!important}.p-x-0{padding-right:0!important}.p-l-0,.p-x-0{padding-left:0!important}.text-xs-right{text-align:right!important}.text-xs-center{text-align:center!important}.text-uppercase{text-transform:uppercase!important}.text-capitalize{text-transform:capitalize!important}.font-weight-bold{font-weight:700}.font-italic{font-style:italic}.m-t-1{margin-top:1rem!important}.m-t-2{margin-top:1.5rem!important}.m-b-2{margin-bottom:1.5rem!important}.p-a-1{padding:1rem!important}.p-x-2{padding-right:1.5rem!important;padding-left:1.5rem!important}.p-b-2{padding-bottom:1.5rem!important}.p-t-2{padding-top:2.1rem!important}@media (max-width:480px){.hidden-xs-down{display:none!important}}@media (max-width:991px){.hidden-md-down{display:none!important}}@media (min-width:992px){.hidden-lg-up,.hidden-sm-down{display:none!important}}.border-b{border-bottom-style:solid!important}.border-t{border-top-style:solid!important}.bg-gray{background-color:#f9fafa!important}.border-b,.border-t{border-width:1px!important;border-color:#eee!important}.p-t-2,.p-y-2{padding-top:2.1rem!important}.p-b-2,.p-y-2{padding-bottom:1.5rem!important}.container{margin-right:auto;margin-left:auto}.container,.container-fluid{padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}.d-md-flex{align-items:center;display:flex;justify-content:space-between}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.colorify-gray{color:#939393!important}@media (min-width:768px){.text-md-left{text-align:left!important}}.d-flex{align-items:center;display:flex;justify-content:space-between}.container-small{max-width:850px;display:block;clear:both;margin:0 auto}.search-input{width:100%;padding:0 15px;max-width:750px;margin:0 auto;position:relative}#search_input{width:100%;background:#fff;color:#595959;font-size:16px;padding:20px 70px 20px 25px;border:1px solid #d7d7d7;margin:0;-moz-border-radius:50px;-webkit-border-radius:50px;border-radius:50px}
+    </style>
+
+<style>
+
+    .lj-text-left {
+        text-align: left;
+    }
+    .lj-about-1-image img {
+            max-width: 100%;
+            margin-top: 60px;
+        }
+    
+        .lj-about-1-list ul {
+            list-style-type: none;
+            margin-top: 0px;
+        }
+    
+        .lj-about-1-list ul li {
+            margin-top: 30px;
+        }
+    
+        .lj-about-1-list ul li > i {
+            color: #769043;
+            position: absolute;
+        }
+    
+        .lj-about-1-list ul li > span {
+            font-size: 1.2em;
+            color:#fff;
+            letter-spacing: 2px;
+            margin-left: 60px;
+        }
+    
+        .lj-about-1-list ul li > p {
+            font-size: 1em;
+            color: #fff;
+            margin-left: 60px;
+        }
+    </style>
+        
+        <main class="main-content">
+
+
+            <section class="hero big left pos-rel" style="">
+                    <div class="container">
+                        <div class="content pos-rel z-2">
+                            <div class="wrapper">
+                                <h1>Build & Manage Your Ultimate Independent Sales Portfolio + Find Companies To Leverage Your Existing Networks</h1>
+        
+                                <p><i class="fa fa-fw fa-check"></i><span> Find high value independent sales opportunities and build the ultimate sales portfolio</span></p>
+                        <p><i class="fa fa-fw fa-check"></i> <span>  Build a network of trusted suppliers who can service your existing customer's needs</span></p>
+                        <p><i class="fa fa-fw fa-check"></i> <span>  Instantly connect with quality vetted companies you want to work with</span></p>
+                        <p><i class="fa fa-fw fa-check"></i> <span>  Easily manage multiple company principals</span></p>
+                        <p><i class="fa fa-fw fa-check"></i> <span>  Earn higher commissions. Get paid faster (coming soon)</span></p>
+                        <p><i class="fa fa-fw fa-check"></i> <span> Work with companies locally or globally</span></p>
+                        <p><i class="fa fa-fw fa-check"></i> <span> Eliminate the cost of your current sales pipeline or CRM software</span></p>
+        
+                          <h5 class="colorify-white m-t-1 animated fadeInLeft">CommissionCrowd is 100% free for independent sales professionals</h5>
+        
+        
+                          <script src="//fast.wistia.com/embed/medias/gn2sf2ndna.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_gn2sf2ndna popover=true popoverAnimateThumbnail=true animated bounceIn" style="display:inline-block;margin-top:5px;margin-bottom:15px;float:left;height:90px;width:150px">&nbsp;</span>
+        
+                          <div class="side">
+                         <a href="https://www.commissioncrowd.com/signup/sales-agents/" class="btn big hover c-button--shadow text-uppercase m-b-1">Join Now</a>
+                         </div>
+                         <br>
+                         <br>
+                         <a href="#" target="_blank" class="m-b-3">
+                                           Why is CommissionCrowd free for independent sales reps?
+                                            <span class="c-caret"></span>
+                                        </a>
+        
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    <div class="container-small pos-rel p-t-3">
+		<div class="row">
+			<div class="col-sm-12 pageheading">
+
+				<h3 class="colorify-dark-blue text-center">We're growing<strong> fast!</strong></h3>
+				<div class="m-t-1"></div>
+				<p class="colorify-dark-blue text-center p-x-1">Find independent B2B sales reps by country.<strong> See our current live stats below</strong>.</p>
+                <div class="agent-stats">
+
+
+                <div class="post-code-finder m-t-1">
+                    <div class="search-input">
+                        <input id="search_input" placeholder="Type a country and search..." class="post-code-finder-input js-postcode-inp js-return-submit">
+                    </div>
+                </div>
+
+            </div>
+			</div>
+		</div>
+	   </div>
+
+       </div>
+      
+    
+    <style>
+        .features-list{overflow:hidden;background:#fff;background:-moz-linear-gradient(top,#fff 0%,#f3f5f7 50%,#fff 100%);background:-webkit-linear-gradient(top,#fff 0%,#f3f5f7 50%,#fff 100%);background:linear-gradient(to bottom,#fff 0%,#f3f5f7 50%,#fff 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ffffff',GradientType=0)}.features-list .feature{position:relative}@media(max-width:767px){.features-list .feature{padding:40px 0}}.features-list .feature .content .content-wrapper{display:table-cell;vertical-align:middle;height:720px}@media(max-width:767px){.features-list .feature .content .content-wrapper{height:auto}}@media(max-width:767px){.features-list .feature .content .content-wrapper{text-align:center}}.features-list .feature .content h2{font-size:40px;line-height:1.2;margin:30px 0 25px 0;padding-right:140px}@media(min-width:992px) and (max-width:1199px){.features-list .feature .content h2{padding-right:80px}}@media(min-width:768px) and (max-width:991px){.features-list .feature .content h2{font-size:36px;padding-right:0}}@media(max-width:767px){.features-list .feature .content h2{font-size:28px;padding-right:0}}.features-list .feature .content p{font-size:16px;line-height:1.8;margin-bottom:20px;/*padding-right:80px*/}@media(min-width:992px) and (max-width:1199px){.features-list .feature .content p{padding-right:30px}}@media(min-width:768px) and (max-width:991px){.features-list .feature .content p{padding-right:0}}@media(max-width:767px){.features-list .feature .content p{padding-right:0}}.features-list .feature .img{position:absolute;top:0;left:0;right:0;bottom:0}@media(max-width:767px){.features-list .feature .img{position:relative;top:auto;right:auto;bottom:auto;left:auto}}.features-list .feature .img .img-wrapper{position:absolute;top:60px;height:720px;line-height:720px}@media(max-width:767px){.features-list .feature .img .img-wrapper{position:relative;top:auto;right:auto;bottom:auto;left:auto;height:auto;line-height:1}}@media(max-width:767px){.features-list .feature .img .img-wrapper img{width:auto;max-width:100%}}.features-list .feature.right .img{left:50%}@media(max-width:767px){.features-list .feature.right .img{left:auto}}.features-list .feature.right .img .img-wrapper{left:0}@media(max-width:767px){.features-list .feature.right .img .img-wrapper{left:auto}}.features-list .feature.left .img{right:50%}@media(max-width:767px){.features-list .feature.left .img{right:auto}}.features-list .feature.left .img .img-wrapper{right:0}@media(max-width:767px){.features-list .feature.left .img .img-wrapper{right:auto}}
+    </style>
+    
+    <section class="visual-container">
+        <div class="visual-area">
+            <div class="container">
+                <p class="colorify-dark-blue">When over <span style="color:#00a3e9">1680</span> companies pay to be part of something new and innovative and then rave about the results... you can't blame us for bragging a little.</p>
+    
+                <ul class="testimonials">
+                    <li>
+                        <div class="img-holder"><a href="#"><img src="img/sopro-logo-small-min-450x150.png" height="75" width="225" alt="smashing magazine"></a></div>
+                         <article>
+                        <p class="colorify-dark-blue"><em>"In Nov 2015 SoPro listed our business profile, sales proposition and commission package on the CommissionCrowd platform. In three weeks we contracted with two high calibre</em></p>
+                        <div class="more-content">
+                        <p class="colorify-dark-blue"><em>
+                         commission-only sales professional applicants, closing the first resultant deal in week 6. We have seen three further applicants and expect 5-10 deals closed under CommissionCrowd agents this quarter, contributing significantly to our expansion. Overall, an exceptional experience and I recommend CommissionCrowd without hesitation to any business looking to connect with competent, independent sales professionals on an immediate basis".</em></p>
+                         </div>
+                         <p><a class="readmore" href="#">Read more (+)</a>
+    </article>
+                    </li>
+                    <li>
+                        <div class="img-holder"><a href="#"><img src="img/kortx-logo-min.png" height="82" width="200" alt="codrops"></a></div>
+    
+    <article>
+    <p class="colorify-dark-blue"> <em>"CommissionCrowd's model really appealed to us since we need to build a global team that can work effectively and still be flexible. We've noticed the agents signed up at CommissionCrowd have worked</em></p>
+    <div class="more-content">
+    <p class="colorify-dark-blue"><em>
+    with some very high profile clients and have tons of experience. It's exciting to be able to work with a group of dedicated sales professionals that deliver with such enthusiasm and drive."</em>
+    </p>
+    </div>
+    <p><a class="readmore" href="#">Read more (+)</a>
+    </article>
+    
+                    </li>
+                    <li>
+                        <div class="img-holder"><a href="#"><img src="img/webiq-min.png" height="72" width="160" alt="codrops"></a></div>
+    
+    <article>
+    <p class="colorify-dark-blue"><em>"CommissionCrowd is a great platform to expand your remote sales force quickly and efficiently. The overall quality of the sales agents is great, we've had good responsiveness out of the agents</em></p>
+    <div class="more-content">
+    <p class="colorify-dark-blue"><em>
+    contacted and inbound applications are rather frequent. It is encouraging that the growth and the quality of the sales agents is improving daily. Communication with the sales agents over the platform is easy and straightforward".</em>
+    </p>
+    </div>
+    <p><a class="readmore" href="#">Read more (+)</a>
+    </article>
+    
+                    </li>
+              </ul>
+              </div>
+            </div>
+        </section>
+    
+        <a href="#" class="link-middle p-b-3">
+            See all testimonials
+            <span class="c-caret"></span>
+        </a>
+    
+    </head>
+
+<style>
+        .opp-search{
+background-color: #062f3c;
+}
+.opp-search .content-wrap, .featured-opps{
+padding: 40px;
+}
+.form-control.no-radius{
+border-radius: 0 !important;
+
+}
+.opp-search .form-control {
+box-shadow: 5px 5px 8px #3498db;
+height: 40px;
+
+}
+.opp-search .btn-md {
+padding: .64rem 1rem !important;
+}
+
+.opp-search p {
+color: #fff;
+margin-top: 20px;
+margin-bottom: 0;
+}
+.opp-search select/*, option*/ {
+-webkit-appearance: none; /* WebKit/Chromium */
+-moz-appearance: none; /* Gecko */
+color: #999;
+
+}
+.opp-search .top-industries a, .opp-search .top-industries a:hover {
+color: #fff;
+padding-left: 10px;
+}
+.opp-search .top-industries a:hover {
+text-decoration: underline !important;
+}
+
+@media (max-width: 991px){
+.opp-search button{
+    width: 100%;
+    margin-top:10px;
+}
+}
+</style>
+
+    <section class="opp-search" style="background-color: #062f3c;">
+        <div class="container content-wrap" style="padding: 40px; margin-right: auto; margin-left: auto;">
+            <h3 class="ui-Heading colorify-white p-b-1" size="small" color="light" margin="large">Search for opportunities: </h3>
+            <form action="https://www.commissioncrowd.com/listings/commission-only-sales-opportunities/opportunities/" method="GET" style="box-sizing: inherit; display: block; margin-top: 0em;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="">
+                            <input type="text" name="q" id="" class="form-control no-radius" placeholder="Opp title, Keyword or Phrase" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="">
+                            <select name="country" class="form-control no-radius">
+                                <option value="0">Country</option>
+                                
+                                    <option value="3">Afghanistan</option>
+                                
+                                    <option value="15">Åland</option>
+                                
+                                    <option value="6">Albania</option>
+                                
+                                    <option value="62">Algeria</option>
+                                
+                                    <option value="11">American Samoa</option>
+                                
+                                    <option value="1">Andorra</option>
+                                
+                                    <option value="8">Angola</option>
+                                
+                                    <option value="5">Anguilla</option>
+                                
+                                    <option value="9">Antarctica</option>
+                                
+                                    <option value="4">Antigua and Barbuda</option>
+                                
+                                    <option value="10">Argentina</option>
+                                
+                                    <option value="7">Armenia</option>
+                                
+                                    <option value="14">Aruba</option>
+                                
+                                    <option value="13">Australia</option>
+                                
+                                    <option value="12">Austria</option>
+                                
+                                    <option value="16">Azerbaijan</option>
+                                
+                                    <option value="32">Bahamas</option>
+                                
+                                    <option value="23">Bahrain</option>
+                                
+                                    <option value="19">Bangladesh</option>
+                                
+                                    <option value="18">Barbados</option>
+                                
+                                    <option value="36">Belarus</option>
+                                
+                                    <option value="20">Belgium</option>
+                                
+                                    <option value="37">Belize</option>
+                                
+                                    <option value="25">Benin</option>
+                                
+                                    <option value="27">Bermuda</option>
+                                
+                                    <option value="33">Bhutan</option>
+                                
+                                    <option value="29">Bolivia</option>
+                                
+                                    <option value="30">Bonaire</option>
+                                
+                                    <option value="17">Bosnia and Herzegovina</option>
+                                
+                                    <option value="35">Botswana</option>
+                                
+                                    <option value="34">Bouvet Island</option>
+                                
+                                    <option value="31">Brazil</option>
+                                
+                                    <option value="106">British Indian Ocean Territory</option>
+                                
+                                    <option value="240">British Virgin Islands</option>
+                                
+                                    <option value="28">Brunei</option>
+                                
+                                    <option value="22">Bulgaria</option>
+                                
+                                    <option value="21">Burkina Faso</option>
+                                
+                                    <option value="24">Burundi</option>
+                                
+                                    <option value="117">Cambodia</option>
+                                
+                                    <option value="47">Cameroon</option>
+                                
+                                    <option value="38">Canada</option>
+                                
+                                    <option value="52">Cape Verde</option>
+                                
+                                    <option value="124">Cayman Islands</option>
+                                
+                                    <option value="41">Central African Republic</option>
+                                
+                                    <option value="215">Chad</option>
+                                
+                                    <option value="46">Chile</option>
+                                
+                                    <option value="48">China</option>
+                                
+                                    <option value="54">Christmas Island</option>
+                                
+                                    <option value="39">Cocos [Keeling] Islands</option>
+                                
+                                    <option value="49">Colombia</option>
+                                
+                                    <option value="119">Comoros</option>
+                                
+                                    <option value="45">Cook Islands</option>
+                                
+                                    <option value="50">Costa Rica</option>
+                                
+                                    <option value="98">Croatia</option>
+                                
+                                    <option value="51">Cuba</option>
+                                
+                                    <option value="53">Curacao</option>
+                                
+                                    <option value="55">Cyprus</option>
+                                
+                                    <option value="56">Czechia</option>
+                                
+                                    <option value="40">Democratic Republic of the Congo</option>
+                                
+                                    <option value="59">Denmark</option>
+                                
+                                    <option value="58">Djibouti</option>
+                                
+                                    <option value="60">Dominica</option>
+                                
+                                    <option value="61">Dominican Republic</option>
+                                
+                                    <option value="221">East Timor</option>
+                                
+                                    <option value="63">Ecuador</option>
+                                
+                                    <option value="65">Egypt</option>
+                                
+                                    <option value="210">El Salvador</option>
+                                
+                                    <option value="88">Equatorial Guinea</option>
+                                
+                                    <option value="67">Eritrea</option>
+                                
+                                    <option value="64">Estonia</option>
+                                
+                                    <option value="69">Ethiopia</option>
+                                
+                                    <option value="72">Falkland Islands</option>
+                                
+                                    <option value="74">Faroe Islands</option>
+                                
+                                    <option value="71">Fiji</option>
+                                
+                                    <option value="70">Finland</option>
+                                
+                                    <option value="75">France</option>
+                                
+                                    <option value="80">French Guiana</option>
+                                
+                                    <option value="175">French Polynesia</option>
+                                
+                                    <option value="216">French Southern Territories</option>
+                                
+                                    <option value="76">Gabon</option>
+                                
+                                    <option value="85">Gambia</option>
+                                
+                                    <option value="79">Georgia</option>
+                                
+                                    <option value="57">Germany</option>
+                                
+                                    <option value="82">Ghana</option>
+                                
+                                    <option value="83">Gibraltar</option>
+                                
+                                    <option value="89">Greece</option>
+                                
+                                    <option value="84">Greenland</option>
+                                
+                                    <option value="78">Grenada</option>
+                                
+                                    <option value="87">Guadeloupe</option>
+                                
+                                    <option value="92">Guam</option>
+                                
+                                    <option value="91">Guatemala</option>
+                                
+                                    <option value="81">Guernsey</option>
+                                
+                                    <option value="86">Guinea</option>
+                                
+                                    <option value="93">Guinea-Bissau</option>
+                                
+                                    <option value="94">Guyana</option>
+                                
+                                    <option value="99">Haiti</option>
+                                
+                                    <option value="96">Heard Island and McDonald Islands</option>
+                                
+                                    <option value="97">Honduras</option>
+                                
+                                    <option value="95">Hong Kong</option>
+                                
+                                    <option value="100">Hungary</option>
+                                
+                                    <option value="109">Iceland</option>
+                                
+                                    <option value="105">India</option>
+                                
+                                    <option value="101">Indonesia</option>
+                                
+                                    <option value="108">Iran</option>
+                                
+                                    <option value="107">Iraq</option>
+                                
+                                    <option value="102">Ireland</option>
+                                
+                                    <option value="104">Isle of Man</option>
+                                
+                                    <option value="103">Israel</option>
+                                
+                                    <option value="110">Italy</option>
+                                
+                                    <option value="44">Ivory Coast</option>
+                                
+                                    <option value="112">Jamaica</option>
+                                
+                                    <option value="114">Japan</option>
+                                
+                                    <option value="111">Jersey</option>
+                                
+                                    <option value="113">Jordan</option>
+                                
+                                    <option value="125">Kazakhstan</option>
+                                
+                                    <option value="115">Kenya</option>
+                                
+                                    <option value="118">Kiribati</option>
+                                
+                                    <option value="246">Kosovo</option>
+                                
+                                    <option value="123">Kuwait</option>
+                                
+                                    <option value="116">Kyrgyzstan</option>
+                                
+                                    <option value="126">Laos</option>
+                                
+                                    <option value="135">Latvia</option>
+                                
+                                    <option value="127">Lebanon</option>
+                                
+                                    <option value="132">Lesotho</option>
+                                
+                                    <option value="131">Liberia</option>
+                                
+                                    <option value="136">Libya</option>
+                                
+                                    <option value="129">Liechtenstein</option>
+                                
+                                    <option value="133">Lithuania</option>
+                                
+                                    <option value="134">Luxembourg</option>
+                                
+                                    <option value="148">Macao</option>
+                                
+                                    <option value="144">Macedonia</option>
+                                
+                                    <option value="142">Madagascar</option>
+                                
+                                    <option value="156">Malawi</option>
+                                
+                                    <option value="158">Malaysia</option>
+                                
+                                    <option value="155">Maldives</option>
+                                
+                                    <option value="145">Mali</option>
+                                
+                                    <option value="153">Malta</option>
+                                
+                                    <option value="143">Marshall Islands</option>
+                                
+                                    <option value="150">Martinique</option>
+                                
+                                    <option value="151">Mauritania</option>
+                                
+                                    <option value="154">Mauritius</option>
+                                
+                                    <option value="248">Mayotte</option>
+                                
+                                    <option value="157">Mexico</option>
+                                
+                                    <option value="73">Micronesia</option>
+                                
+                                    <option value="139">Moldova</option>
+                                
+                                    <option value="138">Monaco</option>
+                                
+                                    <option value="147">Mongolia</option>
+                                
+                                    <option value="140">Montenegro</option>
+                                
+                                    <option value="152">Montserrat</option>
+                                
+                                    <option value="137">Morocco</option>
+                                
+                                    <option value="159">Mozambique</option>
+                                
+                                    <option value="146">Myanmar [Burma]</option>
+                                
+                                    <option value="160">Namibia</option>
+                                
+                                    <option value="169">Nauru</option>
+                                
+                                    <option value="168">Nepal</option>
+                                
+                                    <option value="166">Netherlands</option>
+                                
+                                    <option value="161">New Caledonia</option>
+                                
+                                    <option value="171">New Zealand</option>
+                                
+                                    <option value="165">Nicaragua</option>
+                                
+                                    <option value="162">Niger</option>
+                                
+                                    <option value="164">Nigeria</option>
+                                
+                                    <option value="170">Niue</option>
+                                
+                                    <option value="163">Norfolk Island</option>
+                                
+                                    <option value="121">North Korea</option>
+                                
+                                    <option value="149">Northern Mariana Islands</option>
+                                
+                                    <option value="167">Norway</option>
+                                
+                                    <option value="172">Oman</option>
+                                
+                                    <option value="178">Pakistan</option>
+                                
+                                    <option value="185">Palau</option>
+                                
+                                    <option value="183">Palestine</option>
+                                
+                                    <option value="173">Panama</option>
+                                
+                                    <option value="176">Papua New Guinea</option>
+                                
+                                    <option value="186">Paraguay</option>
+                                
+                                    <option value="174">Peru</option>
+                                
+                                    <option value="177">Philippines</option>
+                                
+                                    <option value="181">Pitcairn Islands</option>
+                                
+                                    <option value="179">Poland</option>
+                                
+                                    <option value="184">Portugal</option>
+                                
+                                    <option value="182">Puerto Rico</option>
+                                
+                                    <option value="187">Qatar</option>
+                                
+                                    <option value="42">Republic of the Congo</option>
+                                
+                                    <option value="188">Réunion</option>
+                                
+                                    <option value="189">Romania</option>
+                                
+                                    <option value="191">Russia</option>
+                                
+                                    <option value="192">Rwanda</option>
+                                
+                                    <option value="26">Saint Barthélemy</option>
+                                
+                                    <option value="199">Saint Helena</option>
+                                
+                                    <option value="120">Saint Kitts and Nevis</option>
+                                
+                                    <option value="128">Saint Lucia</option>
+                                
+                                    <option value="141">Saint Martin</option>
+                                
+                                    <option value="180">Saint Pierre and Miquelon</option>
+                                
+                                    <option value="238">Saint Vincent and the Grenadines</option>
+                                
+                                    <option value="245">Samoa</option>
+                                
+                                    <option value="204">San Marino</option>
+                                
+                                    <option value="209">São Tomé and Príncipe</option>
+                                
+                                    <option value="193">Saudi Arabia</option>
+                                
+                                    <option value="205">Senegal</option>
+                                
+                                    <option value="190">Serbia</option>
+                                
+                                    <option value="195">Seychelles</option>
+                                
+                                    <option value="203">Sierra Leone</option>
+                                
+                                    <option value="198">Singapore</option>
+                                
+                                    <option value="211">Sint Maarten</option>
+                                
+                                    <option value="202">Slovakia</option>
+                                
+                                    <option value="200">Slovenia</option>
+                                
+                                    <option value="194">Solomon Islands</option>
+                                
+                                    <option value="206">Somalia</option>
+                                
+                                    <option value="249">South Africa</option>
+                                
+                                    <option value="90">South Georgia and the South Sandwich Islands</option>
+                                
+                                    <option value="122">South Korea</option>
+                                
+                                    <option value="208">South Sudan</option>
+                                
+                                    <option value="68">Spain</option>
+                                
+                                    <option value="130">Sri Lanka</option>
+                                
+                                    <option value="196">Sudan</option>
+                                
+                                    <option value="207">Suriname</option>
+                                
+                                    <option value="201">Svalbard and Jan Mayen</option>
+                                
+                                    <option value="213">Swaziland</option>
+                                
+                                    <option value="197">Sweden</option>
+                                
+                                    <option value="43">Switzerland</option>
+                                
+                                    <option value="212">Syria</option>
+                                
+                                    <option value="229">Taiwan</option>
+                                
+                                    <option value="219">Tajikistan</option>
+                                
+                                    <option value="230">Tanzania</option>
+                                
+                                    <option value="218">Thailand</option>
+                                
+                                    <option value="217">Togo</option>
+                                
+                                    <option value="220">Tokelau</option>
+                                
+                                    <option value="225">Tonga</option>
+                                
+                                    <option value="227">Trinidad and Tobago</option>
+                                
+                                    <option value="224">Tunisia</option>
+                                
+                                    <option value="226">Turkey</option>
+                                
+                                    <option value="223">Turkmenistan</option>
+                                
+                                    <option value="214">Turks and Caicos Islands</option>
+                                
+                                    <option value="228">Tuvalu</option>
+                                
+                                    <option value="233">U.S. Minor Outlying Islands</option>
+                                
+                                    <option value="241">U.S. Virgin Islands</option>
+                                
+                                    <option value="232">Uganda</option>
+                                
+                                    <option value="231">Ukraine</option>
+                                
+                                    <option value="2">United Arab Emirates</option>
+                                
+                                    <option value="77">United Kingdom</option>
+                                
+                                    <option value="234">United States</option>
+                                
+                                    <option value="235">Uruguay</option>
+                                
+                                    <option value="236">Uzbekistan</option>
+                                
+                                    <option value="243">Vanuatu</option>
+                                
+                                    <option value="237">Vatican City</option>
+                                
+                                    <option value="239">Venezuela</option>
+                                
+                                    <option value="242">Vietnam</option>
+                                
+                                    <option value="244">Wallis and Futuna</option>
+                                
+                                    <option value="66">Western Sahara</option>
+                                
+                                    <option value="247">Yemen</option>
+                                
+                                    <option value="250">Zambia</option>
+                                
+                                    <option value="251">Zimbabwe</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <select name="industry" class="form-control no-radius">
+                                <option value="0">Industry</option>
+                                
+                                    <option value="26">Information Technology &amp; Services</option>
+                                
+                                    <option value="25">Computer Software</option>
+                                
+                                    <option value="3">Marketing &amp; Advertising</option>
+                                
+                                    <option value="24">Internet</option>
+                                
+                                    <option value="36">Management Consulting</option>
+                                
+                                    <option value="72">Design</option>
+                                
+                                    <option value="86">Graphic Design</option>
+                                
+                                    <option value="114">Outsourcing/Offshoring</option>
+                                
+                                    <option value="87">Health, Wellness &amp; Fitness</option>
+                                
+                                    <option value="92">Information Services</option>
+                                
+                                    <option value="64">Computer &amp; Network Security</option>
+                                
+                                    <option value="31">Media Production</option>
+                                
+                                    <option value="39">Consumer Goods</option>
+                                
+                                    <option value="7">Financial Services</option>
+                                
+                                    <option value="73">E-learning</option>
+                                
+                                    <option value="125">Professional Training</option>
+                                
+                                    <option value="23">Human Resources</option>
+                                
+                                    <option value="12">Construction</option>
+                                
+                                    <option value="20">Food &amp; Beverages</option>
+                                
+                                    <option value="45">Wholesale</option>
+                                
+                                    <option value="11">Business Supplies &amp; Equipment</option>
+                                
+                                    <option value="15">Education Management</option>
+                                
+                                    <option value="9">Market Research</option>
+                                
+                                    <option value="32">Hospital &amp; Health Care</option>
+                                
+                                    <option value="42">Telecommunications</option>
+                                
+                                    <option value="51">Animation</option>
+                                
+                                    <option value="137">Retail</option>
+                                
+                                    <option value="48">Accounting</option>
+                                
+                                    <option value="66">Computer Networking</option>
+                                
+                                    <option value="68">Consumer Services</option>
+                                
+                                    <option value="52">Apparel &amp; Fashion</option>
+                                
+                                    <option value="105">Medical Device</option>
+                                
+                                    <option value="142">Staffing &amp; Recruiting</option>
+                                
+                                    <option value="6">Automotive</option>
+                                
+                                    <option value="41">Computer Hardware</option>
+                                
+                                    <option value="113">Online Publishing</option>
+                                
+                                    <option value="75">Events Services</option>
+                                
+                                    <option value="58">Broadcast Media</option>
+                                
+                                    <option value="133">Facilities &amp; Services</option>
+                                
+                                    <option value="89">Hospitality</option>
+                                
+                                    <option value="33">Motion Pictures &amp; Film</option>
+                                
+                                    <option value="16">Electrical &amp; Electronic Manufacturing</option>
+                                
+                                    <option value="124">Printing</option>
+                                
+                                    <option value="136">Research</option>
+                                
+                                    <option value="59">Building Materials</option>
+                                
+                                    <option value="19">Entertainment</option>
+                                
+                                    <option value="90">Import &amp; Export</option>
+                                
+                                    <option value="102">Logistics &amp; Supply Chain</option>
+                                
+                                    <option value="17">Oil &amp; Energy</option>
+                                
+                                    <option value="37">Publishing</option>
+                                
+                                    <option value="22">Restaurants</option>
+                                
+                                    <option value="40">Sports</option>
+                                
+                                    <option value="153">Writing &amp; Editing</option>
+                                
+                                    <option value="69">Cosmetics</option>
+                                
+                                    <option value="74">Environmental Services</option>
+                                
+                                    <option value="18">Mechanical or Industrial Engineering</option>
+                                
+                                    <option value="35">Pharmaceuticals</option>
+                                
+                                    <option value="38">Real Estate</option>
+                                
+                                    <option value="44">Utilities</option>
+                                
+                                    <option value="53">Architecture &amp; Planning</option>
+                                
+                                    <option value="56">Banking</option>
+                                
+                                    <option value="67">Consumer Electronics</option>
+                                
+                                    <option value="29">Industrial Automation</option>
+                                
+                                    <option value="135">Renewables &amp; Environment</option>
+                                
+                                    <option value="65">Computer Games</option>
+                                
+                                    <option value="126">Program Development</option>
+                                
+                                    <option value="128">Public Relations</option>
+                                
+                                    <option value="50">Alternative Medicine</option>
+                                
+                                    <option value="10">Chemicals</option>
+                                
+                                    <option value="101">Leisure &amp; Travel</option>
+                                
+                                    <option value="43">Transportation/Trucking/Railroad</option>
+                                
+                                    <option value="55">Aviation &amp; Aerospace</option>
+                                
+                                    <option value="103">Luxury Goods &amp; Jewelry</option>
+                                
+                                    <option value="30">Machinery</option>
+                                
+                                    <option value="106">Medical Practice</option>
+                                
+                                    <option value="147">Translation &amp; Localization</option>
+                                
+                                    <option value="54">Arts &amp; Crafts</option>
+                                
+                                    <option value="63">Commercial Real Estate</option>
+                                
+                                    <option value="88">Higher Education</option>
+                                
+                                    <option value="93">Insurance</option>
+                                
+                                    <option value="138">Security &amp; Investigations</option>
+                                
+                                    <option value="57">Biotechnology</option>
+                                
+                                    <option value="95">International Trade &amp; Development</option>
+                                
+                                    <option value="8">Investment Management</option>
+                                
+                                    <option value="4">Airlines/Aviation</option>
+                                
+                                    <option value="116">Packaging &amp; Containers</option>
+                                
+                                    <option value="120">Photography</option>
+                                
+                                    <option value="62">Civil Engineering</option>
+                                
+                                    <option value="76">Executive Office</option>
+                                
+                                    <option value="47">Furniture</option>
+                                
+                                    <option value="34">Music</option>
+                                
+                                    <option value="144">Textiles</option>
+                                
+                                    <option value="152">Wireless</option>
+                                
+                                    <option value="80">Food Production</option>
+                                
+                                    <option value="27">Law Practice</option>
+                                
+                                    <option value="107">Mental Health Care</option>
+                                
+                                    <option value="60">Capital Markets</option>
+                                
+                                    <option value="82">Gambling &amp; Casinos</option>
+                                
+                                    <option value="96">Investment Banking/Venture</option>
+                                
+                                    <option value="99">Legal Services</option>
+                                
+                                    <option value="129">Public Safety</option>
+                                
+                                    <option value="141">Sporting Goods</option>
+                                
+                                    <option value="5">Farming</option>
+                                
+                                    <option value="78">Fine Art</option>
+                                
+                                    <option value="83">Glass, Ceramics &amp; Concrete</option>
+                                
+                                    <option value="110">Nanotechnology</option>
+                                
+                                    <option value="148">Venture Capital</option>
+                                
+                                    <option value="71">Defense &amp; Space</option>
+                                
+                                    <option value="81">Fundraising</option>
+                                
+                                    <option value="108">Mining &amp; Metals</option>
+                                
+                                    <option value="115">Package/Freight Delivery</option>
+                                
+                                    <option value="145">Think Tanks</option>
+                                
+                                    <option value="151">Wine &amp; Spirits</option>
+                                
+                                    <option value="91">Individual &amp; Family Services</option>
+                                
+                                    <option value="112">Nonprofit Organization Management</option>
+                                
+                                    <option value="134">Religious Institutions</option>
+                                
+                                    <option value="84">Government Administration</option>
+                                
+                                    <option value="85">Government Relations</option>
+                                
+                                    <option value="94">International Affairs</option>
+                                
+                                    <option value="104">Maritime</option>
+                                
+                                    <option value="13">Military</option>
+                                
+                                    <option value="109">Museums &amp; Institutions</option>
+                                
+                                    <option value="117">Paper &amp; Forest Products</option>
+                                
+                                    <option value="118">Performing Arts</option>
+                                
+                                    <option value="121">Plastics</option>
+                                
+                                    <option value="123">Primary/Secondary</option>
+                                
+                                    <option value="132">Recreational</option>
+                                
+                                    <option value="139">Semiconductors</option>
+                                
+                                    <option value="143">Supermarkets</option>
+                                
+                                    <option value="146">Tobacco</option>
+                                
+                                    <option value="150">Warehousing</option>
+                                
+                                    <option value="49">Alternative Dispute Resolution</option>
+                                
+                                    <option value="61">Civic &amp; Social Organization</option>
+                                
+                                    <option value="70">Dairy</option>
+                                
+                                    <option value="100">Legislative Office</option>
+                                
+                                    <option value="28">Libraries</option>
+                                
+                                    <option value="122">Political Organization</option>
+                                
+                                    <option value="149">Veterinary</option>
+                                
+                                    <option value="79">Fishery</option>
+                                
+                                    <option value="97">Judiciary</option>
+                                
+                                    <option value="98">Law Enforcement</option>
+                                
+                                    <option value="111">Newspapers</option>
+                                
+                                    <option value="119">Philanthropy</option>
+                                
+                                    <option value="127">Public Policy</option>
+                                
+                                    <option value="130">Railroad Manufacture</option>
+                                
+                                    <option value="131">Ranching</option>
+                                
+                                    <option value="140">Shipbuilding</option>
+                                
+                            </select>
+    
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="">
+                            <button type="submit" class="btn btn-base btn-rectangle btn-md"><span class="text-capitalize">Browse Opportunities</span></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row" style="box-sizing: inherit; vertical-align: middle;">
+                <div class="col-md-12 top-industries">
+                    <p><strong><span class="text-uppercase" style="color: #fff;">Top Industries: </span>
+                        
+                            <a href="#">Information Technology &amp; Services</a>
+                            
+                                |
+                            
+                        
+                            <a href="#">Computer Software</a>
+                            
+                                |
+                            
+                        
+                            <a href="#">Marketing &amp; Advertising</a>
+                            
+                            
+                        
+                    </strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .recommended-companies {
+            padding: 70px 0 0;
+            background-color: #468abc;
+            color: #fff;
+            height: 550px;
+            position: relative;
+            margin-bottom: 285px;
+        
+        }
+        
+        .recommended-company {
+            margin-top: 60px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+        
+        .recommended-company .company-desc {
+            background-color: #f5f2f2;
+            color:#263139 !important;
+            padding: 15px;
+            border-radius:0 0 8px 8px;
+            height: 235px;
+        }
+        .recommended-company .img-container {
+            height: 250px;
+            border-radius: 8px 8px 0 0;
+            /*background-repeat:  no-repeat;
+            background-size: cover;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f2f2;
+        }
+        .recommended-company .img-container img{
+            height: 100%;
+        
+        }
+        .logo-container {
+            padding: 6px;
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            bottom: 160px;
+            left: 107px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        
+        @media(max-width: 1199px){
+            .logo-container {
+                padding: 6px;
+                position: absolute;
+                height: 150px;
+                width: 150px;
+                bottom: 160px;
+                left: -webkit-calc(-webkit-calc(100% - 140px)/2);
+                left: -moz-calc(-moz-calc(100% - 140px)/2);
+                left: calc(calc(100% - 140px)/2);
+                border-radius: 4px;
+                background-color: #fff;
+            }
+        }
+        
+        @media (max-width: 991px){
+            .recommended-companies {
+            padding: 70px 0 0;
+            background-color: #468abc;
+            color: #fff;
+            height: auto;
+            position: relative;
+            margin-bottom: 0;
+            }
+        }
+        
+        .company-desc p {
+            margin-top: 90px
+        }
+        
+        .recommended-companies .title {
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+        .box {
+          width: 200px; height: 300px;
+          position: relative;
+          border: 1px solid #BBB;
+          background: #EEE;
+        }
+        .ribbon {
+            position: absolute;
+            right: 15px;
+            z-index: 1;
+            overflow: hidden;
+            width: 75px;
+            height: 75px;
+            text-align: right;
+        }
+        .ribbon span {
+          font-size: 12px;
+          font-weight: bold;
+          color: #FFF;
+          text-transform: uppercase;
+          text-align: center;
+          line-height: 20px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          width: 100px;
+          display: block;
+          background: #79A70A;
+          background: linear-gradient(#00AF43 0%, #00af43 100%);
+          box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+          position: absolute;
+          top: 19px; right: -21px;
+        }
+        
+        
+        .recommended-company .company-name{
+            margin: auto;
+            color: #e63e3e;
+        }
+        </style>
+        
+        
+        <section class="recommended-companies">
+            <div class="container">
+                <div class="wrap">
+                <h5 class="text-center text-uppercase title">Latest Featured Opportunities</h5>
+                <p class="text-center lead">A selection of our latest premium freelance sales opportunities</p>
+                <div class="row">
+                    
+        
+                            <div class="col-md-4 recommended-company">
+                                <a href="https://www.commissioncrowd.com/listings/commission-only-sales-opportunities/earn-up-to-1m-in-commissions-while-helping-eye-care-practices-transform-patient-care/">
+                                    <div class="col-md-12 ">
+                                        <div class="img-container">
+                                            <div class="ribbon"><span>Premium</span></div>
+                                            <div class="company-name text-center"><h4>CPCG LLC</h4></div>
+                                        </div>
+                                        <div class="logo-container">
+                                            <img class="img-responsive" src="img/eye.png" />
+                                        </div>
+                                        <div class="company-desc text-center">
+                                            <p>We are an investment group, helping eye care clinics grow.We are building a leading eye care management service organization powered by smart...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+        
+                    
+        
+                            <div class="col-md-4 recommended-company">
+                                <a href="https://www.commissioncrowd.com/listings/commission-only-sales-opportunities/huge-in-exploding-market-40-residual-commissions-selling-cutting-edge-identity-and-access-management-biometrics-and-id-proofing/">
+                                    <div class="col-md-12 ">
+                                        <div class="img-container">
+                                            <div class="ribbon"><span>Premium</span></div>
+                                            <div class="company-name text-center"><h4>Open Financial Services</h4></div>
+                                        </div>
+                                        <div class="logo-container">
+                                            <img class="img-responsive" src="img/ofs.png" />
+                                        </div>
+                                        <div class="company-desc text-center">
+                                            <p>Identity is at the core of everything we do, whether opening a bank account, shopping online, signing up for a casino player card, or renting a car....</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+        
+                    
+        
+                            <div class="col-md-4 recommended-company">
+                                <a href="https://www.commissioncrowd.com/listings/commission-only-sales-opportunities/help-students-find-a-bright-future-in-canada-while-earning-high-commission-and-with-marketing-support/">
+                                    <div class="col-md-12 ">
+                                        <div class="img-container">
+                                            <div class="ribbon"><span>Premium</span></div>
+                                            <div class="company-name text-center"><h4>CTL Education Ltd O/A CTL Canada School</h4></div>
+                                        </div>
+                                        <div class="logo-container">
+                                            <img class="img-responsive" src="img/school.png" />
+                                        </div>
+                                        <div class="company-desc text-center">
+                                            <p>Earn high commissions helping international students pursue a bright future in Canada!CTL Canada School provides full-time education, immigration, and...</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+        
+                    
+        
+        
+                </div>
+                </div>
+            </div>
+            <div class="text-center btn-container">
+                    <a class="btn btn-lg btn-base btn-rectangle" href="https://www.commissioncrowd.com/listings/commission-only-sales-opportunities/">BROWSE OPPORTUNITIES</a>
+                </div>
+        </section>
+
+        <section class="features-list">
+            <article class="feature f1 right clearfix wow fadeIn" data-wow-delay="0.1s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 content">
+                            <div class="content-wrapper">
+                             <img src="img/connect-min.png" alt="Connect and work with top vetted companies" width="100" height="100"/>
+                                <h2>Connect & Work With Top Companies Globally</h2>
+                                <p>CommissionCrowd integrates you into a global network of top vetted companies who understand how independent sales reps work.</p>
+                                 <p>Use CommissionCrowd to build your sales portfolio or find companies who can supply products/services that your contacts already need.</p>
+                                  <ul class="list-unstyled content-list">
+                                <li>
+                                <h4><strong>Smart Search + Connect</strong></h4>
+                                <p>Use our sophisticated search filters to match with companies you want to add to your sales portfolio anywhere in the world</p>
+                               </li>
+                               </ul>
+                               <p class="tour-quote">"CommissionCrowd is the only platform that truly understands and caters for both companies and independent sales agent's requirements. Being an agent, it has far exceeded my expectations and within 2 weeks of registering I am in talks with six incredible companies. CommissionCrowd really care about sales agents and it shows".</p>
+                               <p class="author"><img src="/static/img/customers/theo-vassiliou-min.png" width="50" height="50" alt="Theo Vassiliou, independent sales agent, 7 years sales experience"> Theo Vassiliou, independent sales agent, 7 years experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <div class="img-wrapper">
+                            <img src="img/agents-feature-1-image-min.png" alt="Connect & Work With Top Companies Globally"/>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="feature f2 left clearfix wow fadeIn" data-wow-delay="0.2s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-6 content">
+                            <div class="content-wrapper">
+                            <img src="img/collaborate-min.png" alt="Manage Your Sales Partnerships" width="100" height="100"/>
+                                <h2>Effortlessly Manage Your Sales Partnerships</h2>
+                                <p>CommissionCrowd gives you everything you need to effortlessly manage your working partnerships with multiple companies globally while maintaining your autonomy as an independent sales rep</p>
+                                <small>Everything is taken care of for you including:
+                                <br>
+                                - On-boarding and learning about your new product/service lines
+                                <br>
+                                - Collaborative sales pipeline
+                                <br>
+                                - Automated high level activity reporting
+                                <br>
+                                - Real-time communication
+                                <br>
+                                - Access shared files: you'll never have to wait for documents to be sent over again
+                                <br>
+                                - Raise invoices and receive your commissions on-time, every time (coming soon)
+                                <br>
+                                Note: We never take a penny of your hard earned commissions
+                                <br>
+                                <br>
+                                <p class="tour-quote">"CommissionCrowd allows me to focus on closing more business while taking away all of the mundane business tasks associated with independent sales"</p>
+                                <p class="author"><img src="/static/img/sales-agents/colin-cornwall-min.png" width="50" height="50" alt="Colin Cornwall, Self-employed sales rep, 20+ years sales experience"> Colin Cornwall, Self-employed sales rep, 20+ years experience</p>
+                                </small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <div class="img-wrapper">
+                            <img src="img/companies-feature-2-image-min.png" alt="Effortlessly Manage Your Sales Partnerships" />
+                </div>
+                </div>
+                </div>
+            </article>
+            <article class="feature f3 right clearfix wow fadeIn" data-wow-delay="0.2s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 content">
+                            <div class="content-wrapper">
+                             <img src="img/uptodate-min.png" alt="Powerful CRM" width="70" height="70"/>
+                                <h2>Stay Organised & Efficient</h2>
+                                <p>We know how endlessly frustrating CRM's can be when all you want to do is stay organised and close more business.</p>
+                                <ul class="list-unstyled content-list">
+                                <li>
+                                <h4><strong>Efficient</strong></h4>
+<p>CommissionCrowd has the answer. We've developed a simple, yet incredibly powerful CRM that's been specifically designed to save you time, effort and sanity.</p>
+</li>
+<li>
+<h4><strong>Organised</strong></h4>
+<p>You'll stay super organised and efficient, allowing you to do what you do best... focus on selling!</p>
+</li>
+</ul>
+<p class="tour-quote">"As a commission-only sales agent I have registered on three other 'job' sites but was delighted to find that CommissionCrowd is inherently unique! I have found it to exceed my expectations in terms of the operational usability. In addition to the comprehensive ability to search for opportunities, it also contains several other useful tools to help me manage my freelance sales business activity."</p>
+                               <p class="author"><img src="/static/img/customers/volodymyr-suvorov-min.png" width="50" height="50" alt="Volodymyr Suvorov, independent sales rep, 29 years sales experience"> Volodymyr Suvorov, independent sales rep, 29 years experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <div class="img-wrapper">
+                            <img src="img/companies-feature-3-image-min.png" alt="Stay Organised & Efficient" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="feature f4 left clearfix wow fadeIn" data-wow-delay="0.2s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-6 content">
+                            <div class="content-wrapper">
+                             <img src="img/pipeline-min.png" alt="Intuitive sales pipeline with drag and drop functionality" width="85" height="85"/>
+                                <h2>Intuitive Sales Pipeline Management</h2>
+                                <p>Always know what stage your leads are at with your own intuitive sales pipeline that shows you all of your leads at a glance.</p>
+                                <ul class="list-unstyled content-list">
+                                <li>
+                                <h4><strong>Drag & Drop</strong></h4>
+                                <p>Includes simple 'drag and drop' functionality to make managing your pipeline quicker than ever before!.</p>
+                               </li>
+                               </ul>
+                                 <p class="tour-quote">"This not only saves me time and resources, but increases my productivity and ultimately my bottom line"</p>
+                               <p class="author"><img src="/static/img/sales-agents/GeremyOMahony-min-70x70.png" width="50" height="50" alt="Geremy O'Mahony, Independent sales rep with 20 years sales experience"> -
+Geremy O'Mahony, Independent sales rep with 20 years experience</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <div class="img-wrapper">
+                            <img src="img/agents-feature-2-image-min.png" alt="Intuitive Sales Pipeline Management" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="feature f5 right clearfix wow fadeIn" data-wow-delay="0.2s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 content">
+                            <div class="content-wrapper">
+                            <img src="img/payment-min.png" alt="Faster payments and quick withdrawals" width="96" height="96"/>
+                                <h2>Fast Commission Payments (Coming soon) </h2>
+                                <ul class="list-unstyled content-list">
+                                <li>
+                                <h4><strong>Get paid every time</strong></h4>
+                                <p>You never have to chase your hard earned commission payments again. Close business through CommissionCrowd and you'll receive your remuneration on-time, every time</p>
+                               </li>
+                               <li>
+                               <h4><strong>Faster payments and quick withdrawals</strong></h4>
+                               <p>Seamless reconciliation and quick withdrawal of funds to your bank account.
+
+Also choose to be paid early as soon as the deal has been approved by the Company (details coming soon) </p>
+                               </li>
+                               </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <div class="img-wrapper">
+                            <img src="img/agents-feature-5-image-min.png" alt="Fast Commission Payments" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+             <article class="feature f6 left clearfix wow fadeIn" data-wow-delay="0.2s">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-6 content">
+                            <div class="content-wrapper">
+                                <img src="img/payment-min.png" alt="Powerful Lead Generation & Referral Business" />
+                                <h2>Powerful Lead Generation & Referral Business</h2>
+                                <p>While we can't reveal too much about this incredible new feature we're currently working on, we can tell you this...</p>
+
+<p>While CommissionCrowd currently enables you to facilitate long term working partnerships with great companies globally, we also fully understand that lead generation and referral business is also an integral part of sales. </p>
+
+<p>We're about to change EVERYTHING so make sure you join us now and you'll be first in-line when this game changing feature is released.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img">
+                        <div class="img-wrapper">
+                            <img src="img/refer-min.png" alt="Powerful Lead Generation & Referral Business" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    
+    
+ </html>

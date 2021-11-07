@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+}
+h1 {
+  font-size: 40px;
+}
+a {
+  padding: 10px 50px;
+  text-decoration: none;
+  border: solid #000;
+  font-size: 18px;
+  border-radius: 5px;
+  font-weight: 700;
+  background: #fff;
+}
+a:hover {
+  background: #000;
+  color: #fff;
+}
+.left {
+  float: left;
+  width: 50%;
+}
+.right {
+  float: right;
+  width: 50%;
+}
+.img-left {
+  height: 100vh;
+  background-image: url("../img/companies.jpg");
+  background-size: cover;
+  opacity: 0.3;
+  transform: rotate(352deg);
+}
+.img-right {
+  height: 100vh;
+  background-image: url("../img/freelancer.jpg");
+  background-size: cover;
+  opacity: 0.3;
+  transform: rotate(15deg);
+}
+.des {
+  z-index: 111111;
+  opacity: 1;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  width: 30%;
+  border: 3px dotted #000;
+  border-radius: 5px;
+  background: #f7f7f7;
+  transform: rotate(16deg);
+}
+.des-left {
+  left: 13%;
+}
+.des-right {
+  right: 13%;
+}
